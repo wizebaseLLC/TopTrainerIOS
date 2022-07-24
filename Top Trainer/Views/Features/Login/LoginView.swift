@@ -105,14 +105,22 @@ struct LoginView: View {
         }
         .padding(.horizontal)
         .padding(.bottom)
+        // Padding must be present if its not LoginType
+        .padding(.bottom, isLoginType ? 0: 42)
         
-        Button("Forgot Password"){
-            sheetPresented = true
+        
+        if isLoginType {
+            Button("Forgot Password"){
+                sheetPresented = true
+            }
+            .foregroundColor(Color("Secondary"))
+            .opacity(0.8)
+            .frame(maxWidth: .infinity, alignment: .trailing)
+            .padding(.horizontal, 24)
+            .padding(.bottom,  !isLoginType ? 0: 42)
         }
-        .opacity(0.8)
-        .frame(maxWidth: .infinity, alignment: .trailing)
-        .padding(.horizontal, 24)
-        .padding(.bottom, 42)
+         
+      
     }
     
     @ViewBuilder func HeaderElements(isLoginType: Bool) -> some View {
@@ -144,7 +152,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(.signup)
+        LoginView(.login)
             .preferredColorScheme(.dark)
     }
 }
