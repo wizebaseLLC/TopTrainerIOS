@@ -12,9 +12,10 @@ enum LoginType: Hashable {
 }
 
 struct LoginView: View {
-    @State var username: String = ""
-    @State var password: String = ""
     let loginType: LoginType
+    @State private var username: String = ""
+    @State private var password: String = ""
+    @State private var sheetPresented = false
     
     init(_ _loginType: LoginType){
         loginType = _loginType
@@ -39,7 +40,12 @@ struct LoginView: View {
             .navigationDestination(for: LoginType.self) { loginType in
                 LoginView(loginType)
             }
+            
         }
+        .sheet(isPresented: $sheetPresented) {
+            ForgotPasswordView()
+        }
+        
     }
     
     @ViewBuilder func FooterElements(isLoginType: Bool) -> some View {
@@ -98,6 +104,14 @@ struct LoginView: View {
             
         }
         .padding(.horizontal)
+        .padding(.bottom)
+        
+        Button("Forgot Password"){
+            sheetPresented = true
+        }
+        .opacity(0.8)
+        .frame(maxWidth: .infinity, alignment: .trailing)
+        .padding(.horizontal, 24)
         .padding(.bottom, 42)
     }
     
@@ -131,7 +145,7 @@ struct LoginView: View {
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         LoginView(.signup)
-            .preferredColorScheme(.light)
+            .preferredColorScheme(.dark)
     }
 }
 

@@ -17,7 +17,7 @@ struct CapsuleTextFieldModifier: ViewModifier {
             .frame(height: kInputHeight)
             .overlay(
                 RoundedRectangle(cornerRadius: kInputHeight)
-                    .stroke(color, lineWidth: 2)
+                    .stroke(color, lineWidth: 3)
             )
     }
 }

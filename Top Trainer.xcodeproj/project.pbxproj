@@ -22,6 +22,7 @@
 		1B60C65F28864E7A00FDDF1E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C65E28864E7A00FDDF1E /* OnboardingView.swift */; };
 		1B60C6622886510300FDDF1E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C6612886510300FDDF1E /* LoginView.swift */; };
 		1B60C665288651B400FDDF1E /* ButtonCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C664288651B400FDDF1E /* ButtonCapsule.swift */; };
+		1BB55DAB288D954B00FD4F2E /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55DAA288D954B00FD4F2E /* ForgotPasswordView.swift */; };
 		1BCA339B288CD64E00F54A07 /* CapsuleTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA339A288CD64E00F54A07 /* CapsuleTextFieldModifier.swift */; };
 		1BCA339F288D012400F54A07 /* PlaceholderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA339E288D012400F54A07 /* PlaceholderModifier.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +63,7 @@
 		1B60C65E28864E7A00FDDF1E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		1B60C6612886510300FDDF1E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1B60C664288651B400FDDF1E /* ButtonCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCapsule.swift; sourceTree = "<group>"; };
+		1BB55DAA288D954B00FD4F2E /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		1BCA339A288CD64E00F54A07 /* CapsuleTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTextFieldModifier.swift; sourceTree = "<group>"; };
 		1BCA339E288D012400F54A07 /* PlaceholderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderModifier.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				1B60C6612886510300FDDF1E /* LoginView.swift */,
+				1BB55DAA288D954B00FD4F2E /* ForgotPasswordView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -383,6 +386,7 @@
 				1B60C665288651B400FDDF1E /* ButtonCapsule.swift in Sources */,
 				1B60C64D2884D8BA00FDDF1E /* Gradients.swift in Sources */,
 				1BCA339B288CD64E00F54A07 /* CapsuleTextFieldModifier.swift in Sources */,
+				1BB55DAB288D954B00FD4F2E /* ForgotPasswordView.swift in Sources */,
 				1B60C65F28864E7A00FDDF1E /* OnboardingView.swift in Sources */,
 				1B60C6502884DA9200FDDF1E /* constants.swift in Sources */,
 				1BCA339F288D012400F54A07 /* PlaceholderModifier.swift in Sources */,
