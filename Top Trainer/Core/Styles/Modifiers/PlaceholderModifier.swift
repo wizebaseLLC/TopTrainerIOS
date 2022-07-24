@@ -14,7 +14,9 @@ extension View {
         @ViewBuilder placeholder: () -> Content) -> some View {
             
             ZStack(alignment: alignment) {
-                placeholder().opacity(shouldShow ? 1 : 0)
+                placeholder()
+                    .padding(.horizontal)
+                    .opacity(shouldShow ? 1 : 0)
                 self
             }
         }

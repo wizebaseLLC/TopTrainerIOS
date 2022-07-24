@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-enum LoginType {
+enum LoginType: Hashable {
     case signup, login
 }
 
@@ -23,27 +23,34 @@ struct LoginView: View {
     var body: some View {
         let isLoginType = loginType == .login
         
-        GeometryReader { geometry in
-            ScrollView {
-                VStack {
-                    HeaderElements(isLoginType: isLoginType)
-                    FormElements()
-                    SocialLoginElements(isLoginType: isLoginType)
-                    FooterElements(isLoginType: isLoginType)
+        NavigationStack {
+            GeometryReader { geometry in
+                ScrollView {
+                    VStack {
+                        HeaderElements(isLoginType: isLoginType)
+                        FormElements(isLoginType: isLoginType)
+                        SocialLoginElements(isLoginType: isLoginType)
+                        FooterElements(isLoginType: isLoginType)
+                    }
+                    .frame(height: geometry.size.height)
                 }
-                .frame(height: geometry.size.height)
+            }
+            .background(Color("Background").ignoresSafeArea(.all))
+            .navigationDestination(for: LoginType.self) { loginType in
+                LoginView(loginType)
             }
         }
-        .background(Color("Background").ignoresSafeArea(.all))
     }
     
     @ViewBuilder func FooterElements(isLoginType: Bool) -> some View {
-        
         HStack(alignment: .firstTextBaseline) {
             Text(isLoginType ? "Dont have an account?" : "Already have an account?")
                 .foregroundColor(.gray)
-            
-            Button(isLoginType ? "Sign up" : "Sign in") {}
+            if isLoginType {
+                NavigationLink("Sign Up", value: LoginType.signup)
+            } else {
+                NavigationLink("Sign in", value: LoginType.login)
+            }
         }
     }
     
@@ -60,7 +67,7 @@ struct LoginView: View {
         .padding(.bottom, 42)
     }
     
-    @ViewBuilder func FormElements() -> some View {
+    @ViewBuilder func FormElements(isLoginType: Bool) -> some View {
         TextField("", text: $username)
             .capsuleTextField()
             .textfieldPlaceholder(when: username.isEmpty, placeholder: {
@@ -87,7 +94,7 @@ struct LoginView: View {
             .padding(.horizontal)
             .padding(.bottom, 40)
         
-        ButtonCapsule(text: "Sign In", background: Color("AccentColor"), shouldHideShadow: true){
+        ButtonCapsule(text: isLoginType ? "Sign In" : "Sign Up", background: Color("AccentColor"), shouldHideShadow: true){
             
         }
         .padding(.horizontal)
@@ -123,7 +130,7 @@ struct LoginView: View {
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        LoginView(.login)
+        LoginView(.signup)
             .preferredColorScheme(.light)
     }
 }
