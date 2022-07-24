@@ -63,7 +63,7 @@ struct LoginView: View {
     @ViewBuilder func FormElements() -> some View {
         TextField("", text: $username)
             .capsuleTextField()
-            .placeholder(when: username.isEmpty, placeholder: {
+            .textfieldPlaceholder(when: username.isEmpty, placeholder: {
                 Text("Email Address")
                     .foregroundColor(.gray)
             })
@@ -77,7 +77,7 @@ struct LoginView: View {
         
         SecureField("", text: $password)
             .capsuleTextField()
-            .placeholder(when: password.isEmpty, placeholder: {
+            .textfieldPlaceholder(when: password.isEmpty, placeholder: {
                 Text("Password")
                     .foregroundColor(.gray)
             })
