@@ -32,9 +32,16 @@ struct WeightPickerView: View {
             
             Picker("Favorite Color", selection: $selectedColorIndex) {
                 ForEach(60...600, id: \.self) { item in
-                    Text("\(item)").tag(item)
-                        .font(.title2.bold())
+                    HStack {
+                        Text("\(item)")
+                            .font(.title2.bold())
+                        
                         .foregroundColor(selectedColorIndex == item ? Color("Secondary") : .primary)
+                        Text("lbs")
+                            .font(.body)
+                            .foregroundColor(selectedColorIndex == item ? Color("Secondary") : .primary)
+                    }
+                    .tag(item)
                 }
             }
             .pickerStyle(.wheel)

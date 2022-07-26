@@ -34,21 +34,25 @@ struct HeightPickerView: View {
             List {
                 Picker("Feet", selection: $selectedFeetIndex) {
                     ForEach(3...10, id: \.self) { item in
-                        Text("\(item) ft").tag(item)
-                            .font(.title2.bold())
+                        HStack {
+                            Text("\(item) ft")
                             .foregroundColor(selectedFeetIndex == item ? Color("Secondary") : .primary)
+                        }
                     }
                 }
                 
                 Picker("Inches", selection: $selectedInchIndex) {
                     ForEach(1...11, id: \.self) { item in
-                        Text("\(item) in").tag(item)
-                            .font(.title2.bold())
+                        HStack {
+                            Text("\(item) in").tag(item)
                             .foregroundColor(selectedInchIndex == item ? Color("Secondary") : .primary)
+                        }
                     }
                 }
             }
+            .frame(height: 160)
         }
+        
         .onAppear {
             withAnimation(.easeOut.delay(0.3)) {
                 appear[0] = true
