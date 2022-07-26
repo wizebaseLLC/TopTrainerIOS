@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct CreateInitialProfileView: View {
-    @State var currentIndex = 0
-    private let maxTagNumber = 1
+    @State private var currentIndex = 0
+    private let maxTagNumber = 3
     
     init() {
         // Add color to the paging view indicators
@@ -21,17 +21,20 @@ struct CreateInitialProfileView: View {
         NavigationStack{
             VStack {
                 TabView(selection: $currentIndex) {
-                    GenderSelectionView()
-                        .tag(0)
-                    
-                    GenderSelectionView()
-                        .tag(1)
-                    
+                    GenderSelectionView().tag(0)
+                    AgePickerView().tag(1)
+                    WeightPickerView().tag(2)
+                    HeightPickerView().tag(3)
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                 
                 HStack {
-                    ButtonCapsule(text: "Prev", background: currentIndex == 0 ? .gray : Color("AccentColor"), shouldHideShadow: false, height: 35) {
+                    ButtonCapsule(
+                        text: "Prev",
+                        background: currentIndex == 0 ? .gray : Color("AccentColor"),
+                        shouldHideShadow: false,
+                        height: 35
+                    ) {
                         if currentIndex > 0 {
                             withAnimation {
                                 currentIndex -= 1
@@ -44,7 +47,12 @@ struct CreateInitialProfileView: View {
                     
                     Spacer()
                     
-                    ButtonCapsule(text: "Next", background: currentIndex == maxTagNumber ? .gray : Color("AccentColor"), shouldHideShadow: false, height: 35) {
+                    ButtonCapsule(
+                        text: "Next",
+                        background: currentIndex == maxTagNumber ? .gray : Color("AccentColor"),
+                        shouldHideShadow: false,
+                        height: 35
+                    ) {
                         if currentIndex < maxTagNumber {
                             withAnimation {
                                 currentIndex += 1

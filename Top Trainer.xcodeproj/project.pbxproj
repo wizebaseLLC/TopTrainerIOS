@@ -25,6 +25,9 @@
 		1B9F5D8F288F1B4E00BA88B7 /* CreateInitialProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D8E288F1B4E00BA88B7 /* CreateInitialProfileView.swift */; };
 		1B9F5D91288F4B7900BA88B7 /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */; };
 		1B9F5D93288F882A00BA88B7 /* GenderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D92288F882A00BA88B7 /* GenderCardView.swift */; };
+		1B9F5D95288F9FEB00BA88B7 /* AgePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D94288F9FEB00BA88B7 /* AgePickerView.swift */; };
+		1B9F5D97288FA53800BA88B7 /* HeightPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D96288FA53800BA88B7 /* HeightPickerView.swift */; };
+		1B9F5D99288FA61700BA88B7 /* WeightPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D98288FA61700BA88B7 /* WeightPickerView.swift */; };
 		1BB55DAB288D954B00FD4F2E /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55DAA288D954B00FD4F2E /* ForgotPasswordView.swift */; };
 		1BCA339B288CD64E00F54A07 /* CapsuleTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA339A288CD64E00F54A07 /* CapsuleTextFieldModifier.swift */; };
 		1BCA339F288D012400F54A07 /* PlaceholderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA339E288D012400F54A07 /* PlaceholderModifier.swift */; };
@@ -69,6 +72,9 @@
 		1B9F5D8E288F1B4E00BA88B7 /* CreateInitialProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInitialProfileView.swift; sourceTree = "<group>"; };
 		1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionView.swift; sourceTree = "<group>"; };
 		1B9F5D92288F882A00BA88B7 /* GenderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCardView.swift; sourceTree = "<group>"; };
+		1B9F5D94288F9FEB00BA88B7 /* AgePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgePickerView.swift; sourceTree = "<group>"; };
+		1B9F5D96288FA53800BA88B7 /* HeightPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightPickerView.swift; sourceTree = "<group>"; };
+		1B9F5D98288FA61700BA88B7 /* WeightPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightPickerView.swift; sourceTree = "<group>"; };
 		1BB55DAA288D954B00FD4F2E /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		1BCA339A288CD64E00F54A07 /* CapsuleTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTextFieldModifier.swift; sourceTree = "<group>"; };
 		1BCA339E288D012400F54A07 /* PlaceholderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderModifier.swift; sourceTree = "<group>"; };
@@ -261,6 +267,9 @@
 			children = (
 				1B9F5D8E288F1B4E00BA88B7 /* CreateInitialProfileView.swift */,
 				1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */,
+				1B9F5D94288F9FEB00BA88B7 /* AgePickerView.swift */,
+				1B9F5D96288FA53800BA88B7 /* HeightPickerView.swift */,
+				1B9F5D98288FA61700BA88B7 /* WeightPickerView.swift */,
 			);
 			path = CreateInitialProfile;
 			sourceTree = "<group>";
@@ -398,12 +407,15 @@
 				1B60C6572884EF1500FDDF1E /* OnboardingB.swift in Sources */,
 				1B60C6202884D0DC00FDDF1E /* ContentView.swift in Sources */,
 				1B60C61E2884D0DC00FDDF1E /* Top_TrainerApp.swift in Sources */,
+				1B9F5D95288F9FEB00BA88B7 /* AgePickerView.swift in Sources */,
 				1B60C6622886510300FDDF1E /* LoginView.swift in Sources */,
+				1B9F5D97288FA53800BA88B7 /* HeightPickerView.swift in Sources */,
 				1B60C6552884E69900FDDF1E /* OnboardingA.swift in Sources */,
 				1B60C665288651B400FDDF1E /* ButtonCapsule.swift in Sources */,
 				1B9F5D91288F4B7900BA88B7 /* GenderSelectionView.swift in Sources */,
 				1B60C64D2884D8BA00FDDF1E /* Gradients.swift in Sources */,
 				1B9F5D8F288F1B4E00BA88B7 /* CreateInitialProfileView.swift in Sources */,
+				1B9F5D99288FA61700BA88B7 /* WeightPickerView.swift in Sources */,
 				1B9F5D93288F882A00BA88B7 /* GenderCardView.swift in Sources */,
 				1BCA339B288CD64E00F54A07 /* CapsuleTextFieldModifier.swift in Sources */,
 				1BB55DAB288D954B00FD4F2E /* ForgotPasswordView.swift in Sources */,

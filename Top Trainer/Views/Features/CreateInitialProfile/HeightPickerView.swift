@@ -1,21 +1,23 @@
 //
-//  GenderSelectionView.swift
+//  HeightPickerView.swift
 //  Top Trainer
 //
-//  Created by Servon Lewis on 7/25/22.
+//  Created by Servon Lewis on 7/26/22.
 //
 
 import SwiftUI
 
-struct GenderSelectionView: View {
+struct HeightPickerView: View {
     private let size: Double = 16
     @State private var isMaleSelected: Bool = true
     @State private var isFemaleSelected: Bool = false
     @State private var appear = [false,false]
+    @State private var selectedFeetIndex = 3
+    @State private var selectedInchIndex = 1
     
     var body: some View {
         VStack {
-            Text("Gender")
+            Text("What's your Height")
                 .font(.title.bold())
                 .offset(y: appear[0] ? 0 : -120)
                 .opacity(appear[0] ? 1 : 0)
@@ -28,17 +30,21 @@ struct GenderSelectionView: View {
                 .opacity(appear[1] ? 1 : 0)
                 .padding(.bottom, 48)
             
-            HStack(spacing: 24) {
-                GenderCardView(isSelected: isMaleSelected, genderOptions: .male) {
-                    withAnimation {
-                        isMaleSelected = true
-                        isFemaleSelected = false
+            
+            List {
+                Picker("Feet", selection: $selectedFeetIndex) {
+                    ForEach(3...10, id: \.self) { item in
+                        Text("\(item) ft").tag(item)
+                            .font(.title2.bold())
+                            .foregroundColor(selectedFeetIndex == item ? Color("Secondary") : .primary)
                     }
                 }
-                GenderCardView(isSelected: isFemaleSelected, genderOptions: .female) {
-                    withAnimation {
-                        isMaleSelected = false
-                        isFemaleSelected = true
+                
+                Picker("Inches", selection: $selectedInchIndex) {
+                    ForEach(1...11, id: \.self) { item in
+                        Text("\(item) in").tag(item)
+                            .font(.title2.bold())
+                            .foregroundColor(selectedInchIndex == item ? Color("Secondary") : .primary)
                     }
                 }
             }
@@ -58,8 +64,8 @@ struct GenderSelectionView: View {
     }
 }
 
-struct GenderSelectionView_Previews: PreviewProvider {
+struct HeightPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        GenderSelectionView()
+        HeightPickerView()
     }
 }

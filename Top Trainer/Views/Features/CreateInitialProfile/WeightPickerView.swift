@@ -1,21 +1,23 @@
 //
-//  GenderSelectionView.swift
+//  WeightPickerView.swift
 //  Top Trainer
 //
-//  Created by Servon Lewis on 7/25/22.
+//  Created by Servon Lewis on 7/26/22.
 //
 
 import SwiftUI
 
-struct GenderSelectionView: View {
+struct WeightPickerView: View {
+    
     private let size: Double = 16
     @State private var isMaleSelected: Bool = true
     @State private var isFemaleSelected: Bool = false
     @State private var appear = [false,false]
+    @State private var selectedColorIndex = 60
     
     var body: some View {
         VStack {
-            Text("Gender")
+            Text("What's your weight")
                 .font(.title.bold())
                 .offset(y: appear[0] ? 0 : -120)
                 .opacity(appear[0] ? 1 : 0)
@@ -28,20 +30,16 @@ struct GenderSelectionView: View {
                 .opacity(appear[1] ? 1 : 0)
                 .padding(.bottom, 48)
             
-            HStack(spacing: 24) {
-                GenderCardView(isSelected: isMaleSelected, genderOptions: .male) {
-                    withAnimation {
-                        isMaleSelected = true
-                        isFemaleSelected = false
-                    }
-                }
-                GenderCardView(isSelected: isFemaleSelected, genderOptions: .female) {
-                    withAnimation {
-                        isMaleSelected = false
-                        isFemaleSelected = true
-                    }
+            Picker("Favorite Color", selection: $selectedColorIndex) {
+                ForEach(60...600, id: \.self) { item in
+                    Text("\(item)").tag(item)
+                        .font(.title2.bold())
+                        .foregroundColor(selectedColorIndex == item ? Color("Secondary") : .primary)
                 }
             }
+            .pickerStyle(.wheel)
+            .padding(.horizontal)
+            
         }
         .onAppear {
             withAnimation(.easeOut.delay(0.3)) {
@@ -58,8 +56,8 @@ struct GenderSelectionView: View {
     }
 }
 
-struct GenderSelectionView_Previews: PreviewProvider {
+struct WeightPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        GenderSelectionView()
+        WeightPickerView()
     }
 }
