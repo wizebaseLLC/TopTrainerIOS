@@ -9,7 +9,8 @@ import SwiftUI
 
 struct ForgotPasswordView: View {
     
-    @State var username: String = ""
+    @State private var username: String = ""
+    @FocusState private var isFocused: Bool
     
     var body: some View {
         NavigationStack {
@@ -22,6 +23,7 @@ struct ForgotPasswordView: View {
                 
                 TextField("Email Address", text: $username)
                     .capsuleTextField(.purple)
+                    .focused($isFocused)
                     .keyboardType(.emailAddress)
                     .cornerRadius(kInputHeight)
                     .padding(.horizontal)
@@ -35,6 +37,9 @@ struct ForgotPasswordView: View {
             }
             .navigationTitle("Forgot Password")
             .navigationBarTitleDisplayMode(.inline)
+        }
+        .onAppear {
+            isFocused = true
         }
     }
 }

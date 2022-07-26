@@ -15,7 +15,8 @@ struct LoginView: View {
     let loginType: LoginType
     @State private var username: String = ""
     @State private var password: String = ""
-    @State private var sheetPresented = false
+    @State private var forgotPasswordSheetPresented = false
+    @State private var signupSheetPresented = false
     
     init(_ _loginType: LoginType){
         loginType = _loginType
@@ -37,25 +38,27 @@ struct LoginView: View {
                 }
             }
             .background(Color("Background").ignoresSafeArea(.all))
-            .navigationDestination(for: LoginType.self) { loginType in
-                LoginView(loginType)
-            }
             
         }
-        .sheet(isPresented: $sheetPresented) {
+        .sheet(isPresented: $forgotPasswordSheetPresented) {
             ForgotPasswordView()
         }
-        
+        .sheet(isPresented: $signupSheetPresented) {
+            LoginView(.signup)
+        }
     }
     
     @ViewBuilder func FooterElements(isLoginType: Bool) -> some View {
         HStack(alignment: .firstTextBaseline) {
-            Text(isLoginType ? "Dont have an account?" : "Already have an account?")
-                .foregroundColor(.gray)
             if isLoginType {
-                NavigationLink("Sign Up", value: LoginType.signup)
-            } else {
-                NavigationLink("Sign in", value: LoginType.login)
+                Text("Dont have an account?")
+                    .foregroundColor(.gray)
+                
+                if isLoginType {
+                    Button("Sign Up") {
+                        signupSheetPresented = true
+                    }
+                }
             }
         }
     }
@@ -111,7 +114,7 @@ struct LoginView: View {
         
         if isLoginType {
             Button("Forgot Password"){
-                sheetPresented = true
+                forgotPasswordSheetPresented = true
             }
             .foregroundColor(Color("Secondary"))
             .opacity(0.8)
@@ -119,8 +122,8 @@ struct LoginView: View {
             .padding(.horizontal, 24)
             .padding(.bottom,  !isLoginType ? 0: 42)
         }
-         
-      
+        
+        
     }
     
     @ViewBuilder func HeaderElements(isLoginType: Bool) -> some View {

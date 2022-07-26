@@ -22,6 +22,9 @@
 		1B60C65F28864E7A00FDDF1E /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C65E28864E7A00FDDF1E /* OnboardingView.swift */; };
 		1B60C6622886510300FDDF1E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C6612886510300FDDF1E /* LoginView.swift */; };
 		1B60C665288651B400FDDF1E /* ButtonCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C664288651B400FDDF1E /* ButtonCapsule.swift */; };
+		1B9F5D8F288F1B4E00BA88B7 /* CreateInitialProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D8E288F1B4E00BA88B7 /* CreateInitialProfileView.swift */; };
+		1B9F5D91288F4B7900BA88B7 /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */; };
+		1B9F5D93288F882A00BA88B7 /* GenderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D92288F882A00BA88B7 /* GenderCardView.swift */; };
 		1BB55DAB288D954B00FD4F2E /* ForgotPasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BB55DAA288D954B00FD4F2E /* ForgotPasswordView.swift */; };
 		1BCA339B288CD64E00F54A07 /* CapsuleTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA339A288CD64E00F54A07 /* CapsuleTextFieldModifier.swift */; };
 		1BCA339F288D012400F54A07 /* PlaceholderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA339E288D012400F54A07 /* PlaceholderModifier.swift */; };
@@ -63,6 +66,9 @@
 		1B60C65E28864E7A00FDDF1E /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		1B60C6612886510300FDDF1E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1B60C664288651B400FDDF1E /* ButtonCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCapsule.swift; sourceTree = "<group>"; };
+		1B9F5D8E288F1B4E00BA88B7 /* CreateInitialProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInitialProfileView.swift; sourceTree = "<group>"; };
+		1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionView.swift; sourceTree = "<group>"; };
+		1B9F5D92288F882A00BA88B7 /* GenderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCardView.swift; sourceTree = "<group>"; };
 		1BB55DAA288D954B00FD4F2E /* ForgotPasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordView.swift; sourceTree = "<group>"; };
 		1BCA339A288CD64E00F54A07 /* CapsuleTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapsuleTextFieldModifier.swift; sourceTree = "<group>"; };
 		1BCA339E288D012400F54A07 /* PlaceholderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderModifier.swift; sourceTree = "<group>"; };
@@ -204,6 +210,7 @@
 		1B60C6512884DDBF00FDDF1E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1B9F5D8D288F1B2B00BA88B7 /* CreateInitialProfile */,
 				1B60C660288650EE00FDDF1E /* Login */,
 				1B60C6532884DDEA00FDDF1E /* Onboarding */,
 			);
@@ -244,8 +251,18 @@
 			isa = PBXGroup;
 			children = (
 				1B60C664288651B400FDDF1E /* ButtonCapsule.swift */,
+				1B9F5D92288F882A00BA88B7 /* GenderCardView.swift */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		1B9F5D8D288F1B2B00BA88B7 /* CreateInitialProfile */ = {
+			isa = PBXGroup;
+			children = (
+				1B9F5D8E288F1B4E00BA88B7 /* CreateInitialProfileView.swift */,
+				1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */,
+			);
+			path = CreateInitialProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -384,7 +401,10 @@
 				1B60C6622886510300FDDF1E /* LoginView.swift in Sources */,
 				1B60C6552884E69900FDDF1E /* OnboardingA.swift in Sources */,
 				1B60C665288651B400FDDF1E /* ButtonCapsule.swift in Sources */,
+				1B9F5D91288F4B7900BA88B7 /* GenderSelectionView.swift in Sources */,
 				1B60C64D2884D8BA00FDDF1E /* Gradients.swift in Sources */,
+				1B9F5D8F288F1B4E00BA88B7 /* CreateInitialProfileView.swift in Sources */,
+				1B9F5D93288F882A00BA88B7 /* GenderCardView.swift in Sources */,
 				1BCA339B288CD64E00F54A07 /* CapsuleTextFieldModifier.swift in Sources */,
 				1BB55DAB288D954B00FD4F2E /* ForgotPasswordView.swift in Sources */,
 				1B60C65F28864E7A00FDDF1E /* OnboardingView.swift in Sources */,

@@ -12,6 +12,7 @@ struct ButtonCapsule: View {
     let text: String
     let background: Color
     let shouldHideShadow: Bool
+    var height: CGFloat = kInputHeight
     let onPress: () -> Void
     
     var body: some View {
@@ -21,19 +22,25 @@ struct ButtonCapsule: View {
             Text(text)
                 .fontWeight(.bold)
                 .padding(.horizontal)
-                .frame(height: kInputHeight)
+                .frame(height: height)
                 .frame(maxWidth: .infinity)
                 .foregroundColor(.white)
                 .background(background)
                 .cornerRadius(kInputHeight)
-                .shadow(color: background.opacity(0.8), radius: shouldHideShadow ? 0 : 4, y: shouldHideShadow ? 0 : 4)
-            
+                .shadow(
+                    color: background.opacity(0.8),
+                    radius: shouldHideShadow ? 0 : 12,
+                    x: shouldHideShadow ? 0 : 4,
+                    y: shouldHideShadow ? 0 : 8
+                )
         }
     }
 }
 
 struct ButtonCapsule_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonCapsule(text: "Get Started", background: Color("AccentColor"),shouldHideShadow: true, onPress: {print("tapped button")})
+        ButtonCapsule(text: "Get Started", background: Color("AccentColor"),shouldHideShadow: true ) {
+            print("tapped button")
+        }
     }
 }
