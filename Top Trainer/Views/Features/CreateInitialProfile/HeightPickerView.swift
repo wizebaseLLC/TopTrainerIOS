@@ -8,17 +8,16 @@
 import SwiftUI
 
 struct HeightPickerView: View {
-    private let size: Double = 16
-    @State private var isMaleSelected: Bool = true
-    @State private var isFemaleSelected: Bool = false
+    
     @State private var appear = [false,false]
-    @State private var selectedFeetIndex = 3
-    @State private var selectedInchIndex = 1
+    @Binding var selectedFeetIndex: Int
+    @Binding var selectedInchIndex: Int 
     
     var body: some View {
         VStack {
             Text("What's your Height")
                 .font(.title.bold())
+                .multilineTextAlignment(.center)
                 .offset(y: appear[0] ? 0 : -120)
                 .opacity(appear[0] ? 1 : 0)
                 .padding(.bottom)
@@ -42,7 +41,7 @@ struct HeightPickerView: View {
                 }
                 
                 Picker("Inches", selection: $selectedInchIndex) {
-                    ForEach(1...11, id: \.self) { item in
+                    ForEach(0...11, id: \.self) { item in
                         HStack {
                             Text("\(item) in").tag(item)
                             .foregroundColor(selectedInchIndex == item ? Color("Secondary") : .primary)
@@ -50,6 +49,7 @@ struct HeightPickerView: View {
                     }
                 }
             }
+            
             .frame(height: 160)
         }
         
@@ -70,6 +70,6 @@ struct HeightPickerView: View {
 
 struct HeightPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        HeightPickerView()
+        HeightPickerView(selectedFeetIndex: .constant(3), selectedInchIndex: .constant(0))
     }
 }

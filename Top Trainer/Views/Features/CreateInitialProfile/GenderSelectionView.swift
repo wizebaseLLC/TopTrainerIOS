@@ -8,15 +8,15 @@
 import SwiftUI
 
 struct GenderSelectionView: View {
-    private let size: Double = 16
-    @State private var isMaleSelected: Bool = true
-    @State private var isFemaleSelected: Bool = false
+    @Binding var isMaleSelected: Bool
+    @Binding var isFemaleSelected: Bool
     @State private var appear = [false,false]
     
     var body: some View {
         VStack {
             Text("Gender")
                 .font(.title.bold())
+                .multilineTextAlignment(.center)
                 .offset(y: appear[0] ? 0 : -120)
                 .opacity(appear[0] ? 1 : 0)
                 .padding(.bottom)
@@ -60,6 +60,6 @@ struct GenderSelectionView: View {
 
 struct GenderSelectionView_Previews: PreviewProvider {
     static var previews: some View {
-        GenderSelectionView()
+        GenderSelectionView(isMaleSelected: .constant(true), isFemaleSelected: .constant(false))
     }
 }

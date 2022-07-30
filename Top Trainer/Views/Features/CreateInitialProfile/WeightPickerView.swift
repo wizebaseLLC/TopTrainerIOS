@@ -9,15 +9,13 @@ import SwiftUI
 
 struct WeightPickerView: View {
     
-    private let size: Double = 16
-    @State private var isMaleSelected: Bool = true
-    @State private var isFemaleSelected: Bool = false
     @State private var appear = [false,false]
-    @State private var selectedColorIndex = 60
+    @Binding var selectedWeight: Int
     
     var body: some View {
         VStack {
             Text("What's your weight")
+                .multilineTextAlignment(.center)
                 .font(.title.bold())
                 .offset(y: appear[0] ? 0 : -120)
                 .opacity(appear[0] ? 1 : 0)
@@ -30,16 +28,16 @@ struct WeightPickerView: View {
                 .opacity(appear[1] ? 1 : 0)
                 .padding(.bottom, 48)
             
-            Picker("Favorite Color", selection: $selectedColorIndex) {
+            Picker("Favorite Color", selection: $selectedWeight) {
                 ForEach(60...600, id: \.self) { item in
                     HStack {
                         Text("\(item)")
                             .font(.title2.bold())
                         
-                        .foregroundColor(selectedColorIndex == item ? Color("Secondary") : .primary)
+                        .foregroundColor(selectedWeight == item ? Color("Secondary") : .primary)
                         Text("lbs")
                             .font(.body)
-                            .foregroundColor(selectedColorIndex == item ? Color("Secondary") : .primary)
+                            .foregroundColor(selectedWeight == item ? Color("Secondary") : .primary)
                     }
                     .tag(item)
                 }
@@ -65,6 +63,6 @@ struct WeightPickerView: View {
 
 struct WeightPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        WeightPickerView()
+        WeightPickerView(selectedWeight: .constant(60))
     }
 }

@@ -127,10 +127,21 @@ struct LoginView: View {
     }
     
     @ViewBuilder func HeaderElements(isLoginType: Bool) -> some View {
+        
+        Image("Logo")
+            .resizable()
+            .frame(width: 150, height: 150)
+        
         if isLoginType {
-            Image("Logo")
-                .resizable()
-                .frame(width: 150, height: 150)
+            VStack(alignment: .center, spacing: 8) {
+                Text("Welcome Back")
+                    .font(.largeTitle)
+                    .foregroundColor(.white)
+                
+                Text("Enter Your details to log in")
+                    .font(.subheadline)
+                    .foregroundColor(.gray)
+            }
         } else {
             VStack(alignment: .center, spacing: 8) {
                 Text("Create new Account")
