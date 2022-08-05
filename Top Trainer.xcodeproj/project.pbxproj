@@ -38,6 +38,7 @@
 		1BCA339F288D012400F54A07 /* PlaceholderModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCA339E288D012400F54A07 /* PlaceholderModifier.swift */; };
 		1BCAA3662890E9C80051C64E /* NamePickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCAA3652890E9C80051C64E /* NamePickerView.swift */; };
 		1BCAA3682890EB9B0051C64E /* AvatarPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCAA3672890EB9B0051C64E /* AvatarPickerView.swift */; };
+		1BF19DD9289CD6C200D8FB07 /* CreateInitialProfile in Resources */ = {isa = PBXBuildFile; fileRef = 1BF19DD8289CD6C200D8FB07 /* CreateInitialProfile */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +93,7 @@
 		1BCA339E288D012400F54A07 /* PlaceholderModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceholderModifier.swift; sourceTree = "<group>"; };
 		1BCAA3652890E9C80051C64E /* NamePickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NamePickerView.swift; sourceTree = "<group>"; };
 		1BCAA3672890EB9B0051C64E /* AvatarPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerView.swift; sourceTree = "<group>"; };
+		1BF19DD8289CD6C200D8FB07 /* CreateInitialProfile */ = {isa = PBXFileReference; lastKnownFileType = folder; path = CreateInitialProfile; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -290,6 +292,7 @@
 				1BCAA3652890E9C80051C64E /* NamePickerView.swift */,
 				1BCAA3672890EB9B0051C64E /* AvatarPickerView.swift */,
 				1B64A8042894C1CB00A8638D /* FitnessLevelPickerView.swift */,
+				1BF19DD8289CD6C200D8FB07 /* CreateInitialProfile */,
 				1B64A8062894C39A00A8638D /* InterestPickerView.swift */,
 			);
 			path = CreateInitialProfile;
@@ -401,6 +404,7 @@
 			files = (
 				1B60C6252884D0DD00FDDF1E /* Preview Assets.xcassets in Resources */,
 				1B60C6222884D0DD00FDDF1E /* Assets.xcassets in Resources */,
+				1BF19DD9289CD6C200D8FB07 /* CreateInitialProfile in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,7 +628,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toptrainerfitness.Top-Trainer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toptrainerfitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -655,7 +659,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toptrainerfitness.Top-Trainer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toptrainerfitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
