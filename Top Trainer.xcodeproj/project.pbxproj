@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B56391C2899F1B60027DDA4 /* CardAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B56391B2899F1B60027DDA4 /* CardAnimations.swift */; };
 		1B60C61E2884D0DC00FDDF1E /* Top_TrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C61D2884D0DC00FDDF1E /* Top_TrainerApp.swift */; };
 		1B60C6202884D0DC00FDDF1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C61F2884D0DC00FDDF1E /* ContentView.swift */; };
 		1B60C6222884D0DD00FDDF1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B60C6212884D0DD00FDDF1E /* Assets.xcassets */; };
@@ -23,9 +24,9 @@
 		1B60C6622886510300FDDF1E /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C6612886510300FDDF1E /* LoginView.swift */; };
 		1B60C665288651B400FDDF1E /* ButtonCapsule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C664288651B400FDDF1E /* ButtonCapsule.swift */; };
 		1B64A8032892CB5900A8638D /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B64A8022892CB5900A8638D /* ImagePicker.swift */; };
-		1B64A8052894C1CB00A8638D /* FitnessLevelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B64A8042894C1CB00A8638D /* FitnessLevelPickerView.swift */; };
 		1B64A8072894C39A00A8638D /* InterestPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B64A8062894C39A00A8638D /* InterestPickerView.swift */; };
 		1B64A8092894C9F900A8638D /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B64A8082894C9F900A8638D /* Interest.swift */; };
+		1B7215FB289D6DD900F62653 /* FitnessLevelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7215FA289D6DD900F62653 /* FitnessLevelPickerView.swift */; };
 		1B9F5D8F288F1B4E00BA88B7 /* CreateInitialProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D8E288F1B4E00BA88B7 /* CreateInitialProfileView.swift */; };
 		1B9F5D91288F4B7900BA88B7 /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */; };
 		1B9F5D93288F882A00BA88B7 /* GenderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D92288F882A00BA88B7 /* GenderCardView.swift */; };
@@ -58,6 +59,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B56391B2899F1B60027DDA4 /* CardAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimations.swift; sourceTree = "<group>"; };
 		1B60C61A2884D0DC00FDDF1E /* Top Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B60C61D2884D0DC00FDDF1E /* Top_TrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top_TrainerApp.swift; sourceTree = "<group>"; };
 		1B60C61F2884D0DC00FDDF1E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -77,9 +79,9 @@
 		1B60C6612886510300FDDF1E /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		1B60C664288651B400FDDF1E /* ButtonCapsule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCapsule.swift; sourceTree = "<group>"; };
 		1B64A8022892CB5900A8638D /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
-		1B64A8042894C1CB00A8638D /* FitnessLevelPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessLevelPickerView.swift; sourceTree = "<group>"; };
 		1B64A8062894C39A00A8638D /* InterestPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestPickerView.swift; sourceTree = "<group>"; };
 		1B64A8082894C9F900A8638D /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
+		1B7215FA289D6DD900F62653 /* FitnessLevelPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessLevelPickerView.swift; sourceTree = "<group>"; };
 		1B9F5D8E288F1B4E00BA88B7 /* CreateInitialProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInitialProfileView.swift; sourceTree = "<group>"; };
 		1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionView.swift; sourceTree = "<group>"; };
 		1B9F5D92288F882A00BA88B7 /* GenderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCardView.swift; sourceTree = "<group>"; };
@@ -119,6 +121,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B56391A2899F1A30027DDA4 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				1B56391B2899F1B60027DDA4 /* CardAnimations.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		1B60C6112884D0DB00FDDF1E = {
 			isa = PBXGroup;
 			children = (
@@ -205,6 +215,7 @@
 		1B60C64A2884D87200FDDF1E /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				1B56391A2899F1A30027DDA4 /* Animations */,
 				1B60C64B2884D89D00FDDF1E /* Modifiers */,
 			);
 			path = Styles;
@@ -285,11 +296,11 @@
 				1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */,
 				1B9F5D94288F9FEB00BA88B7 /* AgePickerView.swift */,
 				1B9F5D96288FA53800BA88B7 /* HeightPickerView.swift */,
+				1B7215FA289D6DD900F62653 /* FitnessLevelPickerView.swift */,
 				1B9F5D98288FA61700BA88B7 /* WeightPickerView.swift */,
 				1B9F5D9A289038B100BA88B7 /* GoalPickerView.swift */,
 				1BCAA3652890E9C80051C64E /* NamePickerView.swift */,
 				1BCAA3672890EB9B0051C64E /* AvatarPickerView.swift */,
-				1B64A8042894C1CB00A8638D /* FitnessLevelPickerView.swift */,
 				1B64A8062894C39A00A8638D /* InterestPickerView.swift */,
 			);
 			path = CreateInitialProfile;
@@ -430,7 +441,6 @@
 				1B60C61E2884D0DC00FDDF1E /* Top_TrainerApp.swift in Sources */,
 				1B9F5D9B289038B200BA88B7 /* GoalPickerView.swift in Sources */,
 				1B9F5D95288F9FEB00BA88B7 /* AgePickerView.swift in Sources */,
-				1B64A8052894C1CB00A8638D /* FitnessLevelPickerView.swift in Sources */,
 				1B64A8072894C39A00A8638D /* InterestPickerView.swift in Sources */,
 				1B60C6622886510300FDDF1E /* LoginView.swift in Sources */,
 				1B9F5D97288FA53800BA88B7 /* HeightPickerView.swift in Sources */,
@@ -439,9 +449,11 @@
 				1B60C665288651B400FDDF1E /* ButtonCapsule.swift in Sources */,
 				1B9F5D91288F4B7900BA88B7 /* GenderSelectionView.swift in Sources */,
 				1B60C64D2884D8BA00FDDF1E /* Gradients.swift in Sources */,
+				1B56391C2899F1B60027DDA4 /* CardAnimations.swift in Sources */,
 				1B9F5D8F288F1B4E00BA88B7 /* CreateInitialProfileView.swift in Sources */,
 				1B64A8032892CB5900A8638D /* ImagePicker.swift in Sources */,
 				1BCAA3682890EB9B0051C64E /* AvatarPickerView.swift in Sources */,
+				1B7215FB289D6DD900F62653 /* FitnessLevelPickerView.swift in Sources */,
 				1B9F5D99288FA61700BA88B7 /* WeightPickerView.swift in Sources */,
 				1B9F5D93288F882A00BA88B7 /* GenderCardView.swift in Sources */,
 				1B64A8092894C9F900A8638D /* Interest.swift in Sources */,
