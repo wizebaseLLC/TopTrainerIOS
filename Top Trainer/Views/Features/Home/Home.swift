@@ -1,0 +1,36 @@
+//
+//  Home.swift
+//  Top Trainer
+//
+//  Created by Servon Lewis on 9/26/22.
+//
+
+import SwiftUI
+
+struct Home: View {
+    var body: some View {
+        NavigationStack {
+            ScrollView {
+                VStack {
+                    FeatureHeader(title: "Featured Top Trainers", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
+                    FeaturedTrainerList()
+                        .padding(.bottom, 24)
+                    FeatureHeader(title: "Todays Activity", shouldShowSeeAll: false, onSeeAllPress: {print("hi")})
+                }
+                .padding(.top)
+            }
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .gradientBackground()
+            .navigationTitle("Home")
+            
+        }
+    }
+    
+    
+}
+
+struct Home_Previews: PreviewProvider {
+    static var previews: some View {
+        Home()
+    }
+}

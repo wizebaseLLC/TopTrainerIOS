@@ -46,6 +46,12 @@ struct InterestPickerView: View {
     }
     
     @ViewBuilder func InterestsItem(_ interest: Binding<Interest>) -> some View {
+        Button {
+            withAnimation(.spring()) {
+                interest.isSelected.wrappedValue.toggle()
+            }
+        }
+    label: {
         VStack(spacing: 16) {
             Text(interest.emoji.wrappedValue)
                 .font(.system(size: 42))
@@ -67,18 +73,15 @@ struct InterestPickerView: View {
         }
         .padding(4)
         .offset(y: !interest.isSelected.wrappedValue ? 0: -2)
-        .onTapGesture {
-            withAnimation(.spring()) {
-                interest.isSelected.wrappedValue.toggle()
-            }
-        }
+        
+    }
     }
 }
 
 struct InterestPickerView_Previews: PreviewProvider {
     static var previews: some View {
         InterestPickerView(interests: .constant(
-             [
+            [
                 Interest(name:"Nutrition", emoji:"🍓", isSelected: false),
                 Interest(name:"Meditation", emoji:"🧘🏾‍♀️", isSelected: false),
                 Interest(name:"Sports", emoji:"🏈", isSelected: false),

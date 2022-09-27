@@ -17,7 +17,7 @@ struct ForgotPasswordView: View {
             VStack {
                 Text("Please enter your email address. You will receive a link to create a new password via email.")
                     .multilineTextAlignment(.center)
-                    .foregroundColor(.secondary)
+                    .foregroundColor(.gray)
                     .padding([.horizontal, .top])
                     .padding(.bottom, 60)
                 
@@ -37,6 +37,7 @@ struct ForgotPasswordView: View {
             }
             .navigationTitle("Forgot Password")
             .navigationBarTitleDisplayMode(.inline)
+            .gradientBackground()
         }
         .onAppear {
             isFocused = true
@@ -46,6 +47,6 @@ struct ForgotPasswordView: View {
 
 struct ForgotPasswordView_Previews: PreviewProvider {
     static var previews: some View {
-        ForgotPasswordView().preferredColorScheme(.dark)
+        ForgotPasswordView()
     }
 }
