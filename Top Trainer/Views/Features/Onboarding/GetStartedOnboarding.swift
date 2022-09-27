@@ -85,6 +85,7 @@ struct GetStartedOnboarding: View {
                 print("Button Tapped")
             }
             .padding(.horizontal)
+            .padding(.bottom)
             HStack {
                 Text("Already have an Account? ")
                 Button("Sign In"){
@@ -100,6 +101,6 @@ struct GetStartedOnboarding: View {
 
 struct GetStartedOnboarding_Previews: PreviewProvider {
     static var previews: some View {
-        GetStartedOnboarding() // .preferredColorScheme(.dark)
+        GetStartedOnboarding().preferredColorScheme(.dark)
     }
 }

@@ -105,6 +105,6 @@ struct AvatarPickerView: View {
 
 struct AvatarPickerView_Previews: PreviewProvider {
     static var previews: some View {
-        AvatarPickerView(image: .constant(nil)).preferredColorScheme(.light)
+        AvatarPickerView(image: .constant(nil))//.preferredColorScheme(.light)
     }
 }

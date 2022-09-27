@@ -27,6 +27,14 @@
 		1B64A8072894C39A00A8638D /* InterestPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B64A8062894C39A00A8638D /* InterestPickerView.swift */; };
 		1B64A8092894C9F900A8638D /* Interest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B64A8082894C9F900A8638D /* Interest.swift */; };
 		1B7215FB289D6DD900F62653 /* FitnessLevelPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7215FA289D6DD900F62653 /* FitnessLevelPickerView.swift */; };
+		1B81A42C28E2149600E19529 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81A42B28E2149600E19529 /* BottomTabView.swift */; };
+		1B81A42E28E2980600E19529 /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81A42D28E2980600E19529 /* FeatureCard.swift */; };
+		1B81A43028E2A26A00E19529 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81A42F28E2A26A00E19529 /* Trainer.swift */; };
+		1B81A43328E2A47F00E19529 /* RoundedCornersShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81A43228E2A47F00E19529 /* RoundedCornersShape.swift */; };
+		1B81A43628E2A76800E19529 /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 1B81A43528E2A76800E19529 /* CachedAsyncImage */; };
+		1B81A43928E2A81400E19529 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81A43828E2A81400E19529 /* Home.swift */; };
+		1B81A43C28E2ADA500E19529 /* FeatureHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81A43B28E2ADA500E19529 /* FeatureHeader.swift */; };
+		1B81A43E28E2AE9000E19529 /* FeaturedTrainerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81A43D28E2AE9000E19529 /* FeaturedTrainerList.swift */; };
 		1B9F5D8F288F1B4E00BA88B7 /* CreateInitialProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D8E288F1B4E00BA88B7 /* CreateInitialProfileView.swift */; };
 		1B9F5D91288F4B7900BA88B7 /* GenderSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */; };
 		1B9F5D93288F882A00BA88B7 /* GenderCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B9F5D92288F882A00BA88B7 /* GenderCardView.swift */; };
@@ -82,6 +90,13 @@
 		1B64A8062894C39A00A8638D /* InterestPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestPickerView.swift; sourceTree = "<group>"; };
 		1B64A8082894C9F900A8638D /* Interest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interest.swift; sourceTree = "<group>"; };
 		1B7215FA289D6DD900F62653 /* FitnessLevelPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessLevelPickerView.swift; sourceTree = "<group>"; };
+		1B81A42B28E2149600E19529 /* BottomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
+		1B81A42D28E2980600E19529 /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
+		1B81A42F28E2A26A00E19529 /* Trainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
+		1B81A43228E2A47F00E19529 /* RoundedCornersShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedCornersShape.swift; sourceTree = "<group>"; };
+		1B81A43828E2A81400E19529 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		1B81A43B28E2ADA500E19529 /* FeatureHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureHeader.swift; sourceTree = "<group>"; };
+		1B81A43D28E2AE9000E19529 /* FeaturedTrainerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeaturedTrainerList.swift; sourceTree = "<group>"; };
 		1B9F5D8E288F1B4E00BA88B7 /* CreateInitialProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateInitialProfileView.swift; sourceTree = "<group>"; };
 		1B9F5D90288F4B7900BA88B7 /* GenderSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelectionView.swift; sourceTree = "<group>"; };
 		1B9F5D92288F882A00BA88B7 /* GenderCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderCardView.swift; sourceTree = "<group>"; };
@@ -101,6 +116,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B81A43628E2A76800E19529 /* CachedAsyncImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -208,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				1B64A8082894C9F900A8638D /* Interest.swift */,
+				1B81A42F28E2A26A00E19529 /* Trainer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -242,6 +259,8 @@
 		1B60C6512884DDBF00FDDF1E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1B81A43728E2A80500E19529 /* Home */,
+				1B81A42A28E2146800E19529 /* BottomTabs */,
 				1B9F5D8D288F1B2B00BA88B7 /* CreateInitialProfile */,
 				1B60C660288650EE00FDDF1E /* Login */,
 				1B60C6532884DDEA00FDDF1E /* Onboarding */,
@@ -282,11 +301,47 @@
 		1B60C6632886519E00FDDF1E /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				1B81A43A28E2AD8E00E19529 /* Views */,
+				1B81A43128E2A46F00E19529 /* Shapes */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1B81A42A28E2146800E19529 /* BottomTabs */ = {
+			isa = PBXGroup;
+			children = (
+				1B81A42B28E2149600E19529 /* BottomTabView.swift */,
+			);
+			path = BottomTabs;
+			sourceTree = "<group>";
+		};
+		1B81A43128E2A46F00E19529 /* Shapes */ = {
+			isa = PBXGroup;
+			children = (
+				1B81A43228E2A47F00E19529 /* RoundedCornersShape.swift */,
+			);
+			path = Shapes;
+			sourceTree = "<group>";
+		};
+		1B81A43728E2A80500E19529 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				1B81A43828E2A81400E19529 /* Home.swift */,
+				1B81A43D28E2AE9000E19529 /* FeaturedTrainerList.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		1B81A43A28E2AD8E00E19529 /* Views */ = {
+			isa = PBXGroup;
+			children = (
 				1B60C664288651B400FDDF1E /* ButtonCapsule.swift */,
 				1B9F5D92288F882A00BA88B7 /* GenderCardView.swift */,
 				1B64A8022892CB5900A8638D /* ImagePicker.swift */,
+				1B81A42D28E2980600E19529 /* FeatureCard.swift */,
+				1B81A43B28E2ADA500E19529 /* FeatureHeader.swift */,
 			);
-			path = Components;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		1B9F5D8D288F1B2B00BA88B7 /* CreateInitialProfile */ = {
@@ -322,6 +377,9 @@
 			dependencies = (
 			);
 			name = "Top Trainer";
+			packageProductDependencies = (
+				1B81A43528E2A76800E19529 /* CachedAsyncImage */,
+			);
 			productName = "Top Trainer";
 			productReference = 1B60C61A2884D0DC00FDDF1E /* Top Trainer.app */;
 			productType = "com.apple.product-type.application";
@@ -394,6 +452,9 @@
 				Base,
 			);
 			mainGroup = 1B60C6112884D0DB00FDDF1E;
+			packageReferences = (
+				1B81A43428E2A76800E19529 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+			);
 			productRefGroup = 1B60C61B2884D0DC00FDDF1E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -438,31 +499,38 @@
 			files = (
 				1B60C6572884EF1500FDDF1E /* OnboardingB.swift in Sources */,
 				1B60C6202884D0DC00FDDF1E /* ContentView.swift in Sources */,
+				1B81A42E28E2980600E19529 /* FeatureCard.swift in Sources */,
 				1B60C61E2884D0DC00FDDF1E /* Top_TrainerApp.swift in Sources */,
 				1B9F5D9B289038B200BA88B7 /* GoalPickerView.swift in Sources */,
 				1B9F5D95288F9FEB00BA88B7 /* AgePickerView.swift in Sources */,
 				1B64A8072894C39A00A8638D /* InterestPickerView.swift in Sources */,
 				1B60C6622886510300FDDF1E /* LoginView.swift in Sources */,
 				1B9F5D97288FA53800BA88B7 /* HeightPickerView.swift in Sources */,
+				1B81A43028E2A26A00E19529 /* Trainer.swift in Sources */,
 				1BCAA3662890E9C80051C64E /* NamePickerView.swift in Sources */,
 				1B60C6552884E69900FDDF1E /* OnboardingA.swift in Sources */,
 				1B60C665288651B400FDDF1E /* ButtonCapsule.swift in Sources */,
 				1B9F5D91288F4B7900BA88B7 /* GenderSelectionView.swift in Sources */,
+				1B81A43928E2A81400E19529 /* Home.swift in Sources */,
 				1B60C64D2884D8BA00FDDF1E /* Gradients.swift in Sources */,
 				1B56391C2899F1B60027DDA4 /* CardAnimations.swift in Sources */,
 				1B9F5D8F288F1B4E00BA88B7 /* CreateInitialProfileView.swift in Sources */,
 				1B64A8032892CB5900A8638D /* ImagePicker.swift in Sources */,
 				1BCAA3682890EB9B0051C64E /* AvatarPickerView.swift in Sources */,
+				1B81A42C28E2149600E19529 /* BottomTabView.swift in Sources */,
 				1B7215FB289D6DD900F62653 /* FitnessLevelPickerView.swift in Sources */,
 				1B9F5D99288FA61700BA88B7 /* WeightPickerView.swift in Sources */,
 				1B9F5D93288F882A00BA88B7 /* GenderCardView.swift in Sources */,
 				1B64A8092894C9F900A8638D /* Interest.swift in Sources */,
+				1B81A43C28E2ADA500E19529 /* FeatureHeader.swift in Sources */,
 				1BCA339B288CD64E00F54A07 /* CapsuleTextFieldModifier.swift in Sources */,
 				1BB55DAB288D954B00FD4F2E /* ForgotPasswordView.swift in Sources */,
 				1B60C65F28864E7A00FDDF1E /* OnboardingView.swift in Sources */,
+				1B81A43328E2A47F00E19529 /* RoundedCornersShape.swift in Sources */,
 				1B60C6502884DA9200FDDF1E /* constants.swift in Sources */,
 				1BCA339F288D012400F54A07 /* PlaceholderModifier.swift in Sources */,
 				1B60C65D2884F41400FDDF1E /* GetStartedOnboarding.swift in Sources */,
+				1B81A43E28E2AE9000E19529 /* FeaturedTrainerList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -624,19 +692,21 @@
 				DEVELOPMENT_TEAM = 6JUYUQGJ4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We require access to your camera to take pictures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toptrainerfitness.Top-Trainer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toptrainerfitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -655,19 +725,21 @@
 				DEVELOPMENT_TEAM = 6JUYUQGJ4X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We require access to your camera to take pictures";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.toptrainerfitness.Top-Trainer";
+				PRODUCT_BUNDLE_IDENTIFIER = com.toptrainerfitness;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -791,6 +863,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		1B81A43428E2A76800E19529 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/lorenzofiamingo/swiftui-cached-async-image";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		1B81A43528E2A76800E19529 /* CachedAsyncImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1B81A43428E2A76800E19529 /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
+			productName = CachedAsyncImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 1B60C6122884D0DB00FDDF1E /* Project object */;
 }

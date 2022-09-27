@@ -78,6 +78,7 @@ struct CreateInitialProfileView: View {
                     .foregroundColor(.secondary)
                 }
             }
+            .gradientBackground()
         }
     }
     
@@ -121,7 +122,11 @@ struct CreateInitialProfileView: View {
 
 struct CreateInitialProfileView_Previews: PreviewProvider {
     static var previews: some View {
-        CreateInitialProfileView()
-            .preferredColorScheme(.dark)
+        Group {
+            CreateInitialProfileView()
+            CreateInitialProfileView()
+                .preferredColorScheme(.dark)
+        }
+
     }
 }

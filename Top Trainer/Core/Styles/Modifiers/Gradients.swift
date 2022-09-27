@@ -58,3 +58,16 @@ extension View {
         modifier(Gradient4())
     }
 }
+
+struct GradientBackground: ViewModifier {
+    func body(content: Content) -> some View {
+        content.background(kGradientBackground.ignoresSafeArea(.all))
+    }
+}
+
+
+extension View {
+    func gradientBackground() -> some View {
+        modifier(GradientBackground())
+    }
+}

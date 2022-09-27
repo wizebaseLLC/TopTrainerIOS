@@ -37,7 +37,7 @@ struct LoginView: View {
                     .frame(height: geometry.size.height)
                 }
             }
-            .background(Color("Background").ignoresSafeArea(.all))
+            .gradientBackground()
             
         }
         .sheet(isPresented: $forgotPasswordSheetPresented) {
