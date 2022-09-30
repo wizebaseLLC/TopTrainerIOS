@@ -15,7 +15,7 @@ struct Home: View {
                     VStack {
                         FeatureHeader(title: "Featured Top Trainers", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
                         FeaturedTrainerList()
-                        FeatureHeader(title: "Todays Activity", shouldShowSeeAll: false, onSeeAllPress: {print("hi")})
+                        FeatureHeader(title: "Today's Activity", shouldShowSeeAll: false, onSeeAllPress: {print("hi")})
                         TodaysActivityGrid()
                     }
                     .padding(.top)
