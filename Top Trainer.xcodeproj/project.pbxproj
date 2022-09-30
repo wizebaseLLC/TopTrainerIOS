@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B494AF628E60C8900D0731F /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF528E60C8900D0731F /* ActivityCard.swift */; };
+		1B494AF828E6371100D0731F /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF728E6371100D0731F /* CircleProgress.swift */; };
+		1B494AFA28E655C500D0731F /* TodaysActivityGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */; };
 		1B56391C2899F1B60027DDA4 /* CardAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B56391B2899F1B60027DDA4 /* CardAnimations.swift */; };
 		1B60C61E2884D0DC00FDDF1E /* Top_TrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C61D2884D0DC00FDDF1E /* Top_TrainerApp.swift */; };
 		1B60C6202884D0DC00FDDF1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C61F2884D0DC00FDDF1E /* ContentView.swift */; };
@@ -67,6 +70,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1B494AF528E60C8900D0731F /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		1B494AF728E6371100D0731F /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
+		1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysActivityGrid.swift; sourceTree = "<group>"; };
 		1B56391B2899F1B60027DDA4 /* CardAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimations.swift; sourceTree = "<group>"; };
 		1B60C61A2884D0DC00FDDF1E /* Top Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B60C61D2884D0DC00FDDF1E /* Top_TrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top_TrainerApp.swift; sourceTree = "<group>"; };
@@ -328,6 +334,7 @@
 			children = (
 				1B81A43828E2A81400E19529 /* Home.swift */,
 				1B81A43D28E2AE9000E19529 /* FeaturedTrainerList.swift */,
+				1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -340,6 +347,8 @@
 				1B64A8022892CB5900A8638D /* ImagePicker.swift */,
 				1B81A42D28E2980600E19529 /* FeatureCard.swift */,
 				1B81A43B28E2ADA500E19529 /* FeatureHeader.swift */,
+				1B494AF728E6371100D0731F /* CircleProgress.swift */,
+				1B494AF528E60C8900D0731F /* ActivityCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -507,9 +516,11 @@
 				1B60C6622886510300FDDF1E /* LoginView.swift in Sources */,
 				1B9F5D97288FA53800BA88B7 /* HeightPickerView.swift in Sources */,
 				1B81A43028E2A26A00E19529 /* Trainer.swift in Sources */,
+				1B494AF628E60C8900D0731F /* ActivityCard.swift in Sources */,
 				1BCAA3662890E9C80051C64E /* NamePickerView.swift in Sources */,
 				1B60C6552884E69900FDDF1E /* OnboardingA.swift in Sources */,
 				1B60C665288651B400FDDF1E /* ButtonCapsule.swift in Sources */,
+				1B494AF828E6371100D0731F /* CircleProgress.swift in Sources */,
 				1B9F5D91288F4B7900BA88B7 /* GenderSelectionView.swift in Sources */,
 				1B81A43928E2A81400E19529 /* Home.swift in Sources */,
 				1B60C64D2884D8BA00FDDF1E /* Gradients.swift in Sources */,
@@ -522,6 +533,7 @@
 				1B9F5D99288FA61700BA88B7 /* WeightPickerView.swift in Sources */,
 				1B9F5D93288F882A00BA88B7 /* GenderCardView.swift in Sources */,
 				1B64A8092894C9F900A8638D /* Interest.swift in Sources */,
+				1B494AFA28E655C500D0731F /* TodaysActivityGrid.swift in Sources */,
 				1B81A43C28E2ADA500E19529 /* FeatureHeader.swift in Sources */,
 				1BCA339B288CD64E00F54A07 /* CapsuleTextFieldModifier.swift in Sources */,
 				1BB55DAB288D954B00FD4F2E /* ForgotPasswordView.swift in Sources */,

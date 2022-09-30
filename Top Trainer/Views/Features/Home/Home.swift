@@ -11,13 +11,15 @@ struct Home: View {
     var body: some View {
         NavigationStack {
             ScrollView {
-                VStack {
-                    FeatureHeader(title: "Featured Top Trainers", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
-                    FeaturedTrainerList()
-                        .padding(.bottom, 24)
-                    FeatureHeader(title: "Todays Activity", shouldShowSeeAll: false, onSeeAllPress: {print("hi")})
+                ZStack {
+                    VStack {
+                        FeatureHeader(title: "Featured Top Trainers", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
+                        FeaturedTrainerList()
+                        FeatureHeader(title: "Todays Activity", shouldShowSeeAll: false, onSeeAllPress: {print("hi")})
+                        TodaysActivityGrid()
+                    }
+                    .padding(.top)
                 }
-                .padding(.top)
             }
             .frame(maxWidth: .infinity, alignment: .leading)
             .gradientBackground()

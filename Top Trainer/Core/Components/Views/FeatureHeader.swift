@@ -23,10 +23,10 @@ struct FeatureHeader: View {
                 Button {onSeeAllPress()} label: {
                     HStack(spacing: 4) {
                         Text("See all")
-                            .font(.subheadline)
-                        Image(systemName: "chevron.right").font(.system(size: 12))
+                        Image(systemName: "chevron.right")
                     }
-                    
+                    .font(.footnote)
+                    .foregroundColor(Color("Tertiary"))
                     .opacity(0.9)
                 }
             }

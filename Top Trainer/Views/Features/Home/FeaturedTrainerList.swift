@@ -16,7 +16,6 @@ struct FeaturedTrainerList: View {
                         .padding(.trailing)
                 }
             }
-            
             .padding(.horizontal)
         }
     }

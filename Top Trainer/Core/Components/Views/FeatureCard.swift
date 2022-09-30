@@ -21,6 +21,8 @@ struct FeatureCard: View {
             }
         }
         .foregroundColor(.primary)
+        .padding(.bottom)
+        .padding(.bottom)
     }
     
     /// The image background
@@ -32,13 +34,13 @@ struct FeatureCard: View {
         }
         .frame(width: 314, height: 200)
         .cornerRadius(cornerRadius)
-        .shadow( radius: 14 )
+        .shadow(color: .gray.opacity(0.2), radius: 16, x: 8, y: 8 )
     }
     
     /// The Pane that specifies the name and star rating
     var detailsPane: some View {
         RoundedCornersShape(corners: [.bottomLeft, .bottomRight], radius: cornerRadius)
-            .fill(Material.ultraThinMaterial)
+            .fill(Material.thinMaterial)
             .frame(width: 314, height: 50)
             .overlay(
                 HStack {
@@ -47,13 +49,15 @@ struct FeatureCard: View {
                     
                     Spacer()
                     
-                    HStack(spacing: 2) {
+                    
+                    Label {
+                        Text("\(trainer.rating.formatted(.number.precision(.fractionLength(1))))")
+                    } icon: {
                         Image(systemName: "star.fill")
                             .foregroundColor(.yellow)
-                        
-                        Text("\(trainer.rating.formatted(.number.precision(.fractionLength(1))))")
-                            .font(.footnote)
                     }
+                    .font(.footnote)
+                    
                     
                 }
                     .frame(maxWidth: .infinity, alignment: .leading)
