@@ -10,6 +10,7 @@ import SwiftUI
 struct TodaysActivityGrid: View {
     
     let heartRateValues: [MetricModel] = getHeartRateValues()
+    static let heartRateCount: Int = getHeartRateValues().count
     
     var body: some View {
         Grid(horizontalSpacing: 16, verticalSpacing: 16) {
@@ -129,14 +130,20 @@ struct TodaysActivityGrid: View {
         let threehourAgo  = "\(hours - 3):\(minutes):\(seconds)"
         let fourHourAgo  = "\(hours - 4):\(minutes):\(seconds)"
         let fiveHourAgo  = "\(hours - 5):\(minutes):\(seconds)"
+        let sixHourAgo  = "\(hours - 6):\(minutes):\(seconds)"
+        let sevenHourAgo  = "\(hours - 7):\(minutes):\(seconds)"
+        let eightHourAgo  = "\(hours - 8):\(minutes):\(seconds)"
         
         return [
+            .init(type: eightHourAgo, count: 200),
+            .init(type: sevenHourAgo, count: 75),
+            .init(type: sixHourAgo, count: 135),
             .init(type: fiveHourAgo, count: 140),
             .init(type: fourHourAgo, count: 40),
             .init(type: threehourAgo, count: 90),
             .init(type: twohourAgo, count: 170),
             .init(type: hourAgo, count: 120),
-            .init(type: currentTime, count: 55)
+            .init(type: currentTime, count: 150)
         ]
     }
 }

@@ -15,7 +15,6 @@ enum ActivityCardSizes {
 enum MetricType {
     case circle, lineChart, water, count, chartView
 }
-
 /// Card used to display a high level metric.
 struct ActivityCard: View {
     /// Must be from 0.0 - 1.0 if cicle metric type.
@@ -179,8 +178,10 @@ struct ActivityCard: View {
         }
         .onAppear {
             for (i, v) in lineChartValues.enumerated() {
-                withAnimation(.easeInOut(duration: Double(lineChartValues.count - i))) { 
-                    lineChartItems.insert(v, at: 0)
+                if lineChartItems.count < TodaysActivityGrid.heartRateCount{
+                    withAnimation(.easeInOut(duration: Double(lineChartValues.count - i))) { 
+                        lineChartItems.insert(v, at: 0)
+                    }
                 }
             }
         }
