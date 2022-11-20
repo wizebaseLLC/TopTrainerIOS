@@ -21,6 +21,8 @@ struct ButtonCapsule: View {
         } label: {
             Text(text)
                 .fontWeight(.bold)
+                .transition(.opacity.combined(with: .scale))
+                .id("ButtonCapsule \(text)")
                 .padding(.horizontal)
                 .frame(height: height)
                 .frame(maxWidth: .infinity)
@@ -28,9 +30,9 @@ struct ButtonCapsule: View {
                 .background(background)
                 .cornerRadius(kInputHeight)
                 .shadow(
-                    color: background.opacity(0.8),
+                    color: background.opacity(0.3),
                     radius: shouldHideShadow ? 0 : 12,
-                    x: shouldHideShadow ? 0 : 4,
+                    x: shouldHideShadow ? 0 : 0,
                     y: shouldHideShadow ? 0 : 8
                 )
         }

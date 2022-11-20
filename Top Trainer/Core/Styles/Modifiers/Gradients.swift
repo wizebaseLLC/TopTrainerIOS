@@ -13,7 +13,6 @@ struct Gradient1: ViewModifier {
     }
 }
 
-
 extension View {
     func gradient1() -> some View {
         modifier(Gradient1())

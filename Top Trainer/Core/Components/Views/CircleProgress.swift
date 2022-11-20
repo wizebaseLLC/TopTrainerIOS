@@ -30,6 +30,7 @@ struct CircleProgress: View {
                          )
                      )
                      .rotationEffect(.degrees(-90))
+                     .shadow(color: color.opacity(0.8) ,radius: 14)
                      .animation(.easeOut(duration: 1.0), value: progress)
 
              }

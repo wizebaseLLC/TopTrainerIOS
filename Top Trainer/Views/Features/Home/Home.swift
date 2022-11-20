@@ -21,6 +21,7 @@ struct Home: View {
                     .padding(.top)
                 }
             }
+            .scrollIndicators(.hidden)
             .frame(maxWidth: .infinity, alignment: .leading)
             .gradientBackground()
             .navigationTitle("Home")

@@ -61,9 +61,9 @@ struct InterestPickerView: View {
                         .frame(width: 75, height: 75)
                         .foregroundColor(.purple.opacity(0.5))
                         .background(
-                            interest.isSelected.wrappedValue ? Color("Secondary") : .clear)
+                            interest.isSelected.wrappedValue ? Color("Secondary").opacity(0.8) : .clear)
                         .cornerRadius(30)
-                        .shadow(color: Color("Secondary"), radius: 10)
+                        .shadow(color: Color("Secondary").opacity(0.4), radius: 14)
                     
                 )
             Text(interest.name.wrappedValue)

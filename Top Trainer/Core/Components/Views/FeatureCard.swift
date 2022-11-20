@@ -14,34 +14,32 @@ struct FeatureCard: View {
     let onPress: () -> Void
     
     var body: some View {
-        Button {} label:  {
-            ZStack(alignment: .bottom) {
-                imageBackground
-                detailsPane
-            }
+        ZStack(alignment: .bottom) {
+            imageBackground
+            detailsPane
         }
         .foregroundColor(.primary)
-        .padding(.bottom)
-        .padding(.bottom)
+        .frame(width: 314, height: 200)
     }
     
     /// The image background
     var imageBackground: some View {
-        CachedAsyncImage(url: URL(string: trainer.imageUrl)) { image in
-            image.resizable()
-        } placeholder: {
-            ProgressView()
+        Button { onPress() } label:  {
+            CachedAsyncImage(url: URL(string: trainer.imageUrl)) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
+            }
+            .cornerRadius(cornerRadius)
+            .shadow(color: .black.opacity(0.6), radius: 16, x: 8, y: 8 )
         }
-        .frame(width: 314, height: 200)
-        .cornerRadius(cornerRadius)
-        .shadow(color: .gray.opacity(0.2), radius: 16, x: 8, y: 8 )
     }
     
     /// The Pane that specifies the name and star rating
     var detailsPane: some View {
         RoundedCornersShape(corners: [.bottomLeft, .bottomRight], radius: cornerRadius)
             .fill(Material.thinMaterial)
-            .frame(width: 314, height: 50)
+            .frame(height: 50)
             .overlay(
                 HStack {
                     Text(trainer.displayName)
@@ -64,11 +62,12 @@ struct FeatureCard: View {
                     .padding()
                 
             )
+            .allowsHitTesting(false)
     }
 }
 
 struct FeatureCard_Previews: PreviewProvider {
     static var previews: some View {
-        FeatureCard(trainer: TrainerSampleData[3], onPress: {print("hi")})
+        FeatureCard(trainer: TrainerSampleData[0], onPress: {print("hi")})
     }
 }

@@ -19,7 +19,7 @@ struct Trainer: Identifiable {
 
 let TrainerSampleData: [Trainer] = [
     Trainer(
-        firstName: "Roman", lastName: "Reigns",displayName: "Roman Reigns", imageUrl:"https://www.wwe.com/f/styles/wwe_large/public/gallery/thumb/2015/03/05_Diary_03252015rf_357.jpg",title: "Head of the table",rating: 5
+        firstName: "Roman", lastName: "Reigns",displayName: "Roman Reigns", imageUrl:"https://www.pwmania.com/wp-content/uploads/2022/11/roman-reigns-heyman.jpg",title: "Head of the table",rating: 5
     ),
     Trainer(
         firstName: "Dwayne", lastName: "Johnson",displayName: "The Rock", imageUrl:"https://www.muscleandfitness.com/wp-content/uploads/2017/06/The-Rock-Dwayne-Johnson-Cable-Crossover-Promo.jpg?w=1180&quality=86&strip=all",title: "Black Atom",rating: 3.5

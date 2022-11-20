@@ -14,6 +14,8 @@ struct FeaturedTrainerList: View {
                 ForEach(TrainerSampleData) { trainer in
                     FeatureCard(trainer: trainer, onPress: {print("hi")})
                         .padding(.trailing)
+                        .padding(.bottom)
+                        .padding(.bottom)
                 }
             }
             .padding(.horizontal)
