@@ -24,9 +24,9 @@ struct TodaysActivityGrid: View {
                         metricType: .count,
                         metricValue: "12",
                         metricDescription: "Working Sets",
-                        metricColor: .purple,
+                        metricColor: Color("AccentColor"),
                         backgroundColor: Color.black.gradient,
-                        shadowColor: .purple,
+                        shadowColor: Color("AccentColor"),
                         onPress: { print("hi") }
                     )
                     
@@ -64,6 +64,23 @@ struct TodaysActivityGrid: View {
                 
                 VStack(spacing: 16)  {
                     ActivityCard(
+                        value: 1.0,
+                        size: .large,
+                        title: "Heart",
+                        icon: "heart.fill",
+                        iconColor: .pink,
+                        metricType: .lineChart,
+                        metricValue: "\(Int(heartRateValues[heartRateValues.count - 1].count))",
+                        metricDescription: "45min",
+                        metricColor: .pink,
+                        backgroundColor: Color.black.gradient,
+                        shadowColor: .pink,
+                        onPress: { print("hi") },
+                        // Reversed so that the animation can start from the left.
+                        lineChartValues: heartRateValues.reversed()
+                    )
+                    
+                    ActivityCard(
                         value: 0.5,
                         size: .medium,
                         title: "Water",
@@ -83,31 +100,14 @@ struct TodaysActivityGrid: View {
                         size: .small,
                         title: "Sleep",
                         icon: "moon.stars.fill",
-                        iconColor: Color("AccentColor"),
+                        iconColor: .purple,
                         metricType: .circle,
                         metricValue: "8h",
                         metricDescription: "45min",
-                        metricColor: Color("AccentColor"),
+                        metricColor: .purple,
                         backgroundColor: Color.black.gradient,
-                        shadowColor: Color("AccentColor"),
+                        shadowColor: .purple,
                         onPress: { print("hi") }
-                    )
-                    
-                    ActivityCard(
-                        value: 1.0,
-                        size: .large,
-                        title: "Heart",
-                        icon: "heart.fill",
-                        iconColor: .pink,
-                        metricType: .lineChart,
-                        metricValue: "\(Int(heartRateValues[heartRateValues.count - 1].count))",
-                        metricDescription: "45min",
-                        metricColor: .pink,
-                        backgroundColor: Color.black.gradient,
-                        shadowColor: .pink,
-                        onPress: { print("hi") },
-                        // Reversed so that the animation can start from the left.
-                        lineChartValues: heartRateValues.reversed()
                     )
                 }
             }
@@ -116,7 +116,7 @@ struct TodaysActivityGrid: View {
     
     // Gets the values of the heart rate.
     // TODO: Will need to use HealthKit to get the actual values.
-   static func getHeartRateValues() -> [MetricModel] {
+    static func getHeartRateValues() -> [MetricModel] {
         let today = Date()
         // 2. Pick the date components
         let hours   = (Calendar.current.component(.hour, from: today))
