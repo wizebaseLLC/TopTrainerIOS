@@ -9,9 +9,12 @@ import SwiftUI
 import CachedAsyncImage
 
 struct FeatureCard: View {
-    let trainer: Trainer
+    let item: FeaturedCardProps
     let cornerRadius: CGFloat = 40
     let onPress: () -> Void
+    var width: CGFloat = 314
+    var height: CGFloat = 200
+    var showOpacity: Bool = false
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -19,13 +22,13 @@ struct FeatureCard: View {
             detailsPane
         }
         .foregroundColor(.primary)
-        .frame(width: 314, height: 200)
+        .frame(width: width, height: height)
     }
     
     /// The image background
     var imageBackground: some View {
         Button { onPress() } label:  {
-            CachedAsyncImage(url: URL(string: trainer.imageUrl)) { image in
+            CachedAsyncImage(url: URL(string: item.imageUrl)) { image in
                 image.resizable()
             } placeholder: {
                 ProgressView()
@@ -37,37 +40,55 @@ struct FeatureCard: View {
     
     /// The Pane that specifies the name and star rating
     var detailsPane: some View {
+        Group {
+            if showOpacity {
+                  detailBackgroundOpacity
+                    .frame(height: 50)
+                    .overlay(detailOverlay)
+                    .allowsHitTesting(false)
+            } else {
+                   detailBackgroundMaterial
+                    .frame(height: 50)
+                    .overlay(detailOverlay)
+                    .allowsHitTesting(false)
+            }
+        }
+    }
+    
+    var detailBackgroundMaterial: some View {
         RoundedCornersShape(corners: [.bottomLeft, .bottomRight], radius: cornerRadius)
-            .fill(Material.thinMaterial)
-            .frame(height: 50)
-            .overlay(
-                HStack {
-                    Text(trainer.displayName)
-                        .bold()
-                    
-                    Spacer()
-                    
-                    
-                    Label {
-                        Text("\(trainer.rating.formatted(.number.precision(.fractionLength(1))))")
-                    } icon: {
-                        Image(systemName: "star.fill")
-                            .foregroundColor(.yellow)
-                    }
-                    .font(.footnote)
-                    
-                    
-                }
-                    .frame(maxWidth: .infinity, alignment: .leading)
-                    .padding()
-                
-            )
-            .allowsHitTesting(false)
+            .fill(Material.ultraThin)
+        
+    }
+    
+    var detailBackgroundOpacity: some View {
+        RoundedCornersShape(corners: [.bottomLeft, .bottomRight], radius: cornerRadius)
+            .fill(.black.opacity(0.3))
+    }
+    
+    var detailOverlay: some View {
+        HStack {
+            Text(item.displayName)
+                .fontWeight(.heavy)
+            Spacer()
+            Label {
+                Text("\(item.rating.formatted(.number.precision(.fractionLength(1))))")
+            } icon: {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+            }
+            .font(.subheadline)
+            .fontWeight(.heavy)
+            
+            
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding()
     }
 }
 
 struct FeatureCard_Previews: PreviewProvider {
     static var previews: some View {
-        FeatureCard(trainer: TrainerSampleData[0], onPress: {print("hi")})
+        FeatureCard(item: TrainerSampleData[0], onPress: {print("hi")},showOpacity: true)
     }
 }

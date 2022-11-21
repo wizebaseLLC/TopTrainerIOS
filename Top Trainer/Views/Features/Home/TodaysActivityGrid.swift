@@ -133,29 +133,25 @@ struct TodaysActivityGrid: View {
         let hours   = (Calendar.current.component(.hour, from: today))
         let minutes = (Calendar.current.component(.minute, from: today))
         let seconds = (Calendar.current.component(.second, from: today))
-        // 3. Show the time
-        let currentTime  = "\(hours):\(minutes):\(seconds)"
-        let hourAgo  = "\(hours - 1):\(minutes):\(seconds)"
-        let twohourAgo  = "\(hours - 2):\(minutes):\(seconds)"
-        let threehourAgo  = "\(hours - 3):\(minutes):\(seconds)"
-        let fourHourAgo  = "\(hours - 4):\(minutes):\(seconds)"
-        let fiveHourAgo  = "\(hours - 5):\(minutes):\(seconds)"
-        let sixHourAgo  = "\(hours - 6):\(minutes):\(seconds)"
-        let sevenHourAgo  = "\(hours - 7):\(minutes):\(seconds)"
-        let eightHourAgo  = "\(hours - 8):\(minutes):\(seconds)"
+        
+        let getHour = {(_ reduceHourBy: Int) in
+            "\(hours - reduceHourBy):\(minutes):\(seconds)"
+        }
         
         return [
-            .init(type: eightHourAgo, count: 200),
-            .init(type: sevenHourAgo, count: 75),
-            .init(type: sixHourAgo, count: 135),
-            .init(type: fiveHourAgo, count: 140),
-            .init(type: fourHourAgo, count: 40),
-            .init(type: threehourAgo, count: 90),
-            .init(type: twohourAgo, count: 170),
-            .init(type: hourAgo, count: 120),
-            .init(type: currentTime, count: 150)
+            .init(type: getHour(8), count: 200),
+            .init(type: getHour(7), count: 75),
+            .init(type: getHour(6), count: 135),
+            .init(type: getHour(5), count: 140),
+            .init(type: getHour(4), count: 40),
+            .init(type: getHour(3), count: 90),
+            .init(type: getHour(2), count: 170),
+            .init(type: getHour(1), count: 120),
+            .init(type: getHour(0), count: 150)
         ]
     }
+    
+    
 }
 
 struct TodaysActivityGrid_Previews: PreviewProvider {

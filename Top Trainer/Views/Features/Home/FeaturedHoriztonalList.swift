@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-struct FeaturedTrainerList: View {
+struct FeaturedHorizontalList: View {
+    let listData: [FeaturedCardProps]
+    var showOpacity: Bool = false
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
-                ForEach(TrainerSampleData) { trainer in
-                    FeatureCard(trainer: trainer, onPress: {print("hi")})
+                ForEach(listData) { trainer in
+                    FeatureCard(item: trainer, onPress: {print("hi")}, showOpacity: showOpacity)
                         .padding(.trailing)
-                        .padding(.bottom)
+                        .padding(.top)
                         .padding(.bottom)
                 }
             }
@@ -23,8 +26,8 @@ struct FeaturedTrainerList: View {
     }
 }
 
-struct FeaturedTrainerList_Previews: PreviewProvider {
+struct FeaturedHorizontalList_Previews: PreviewProvider {
     static var previews: some View {
-        FeaturedTrainerList()
+        FeaturedHorizontalList(listData: MealSampleData)
     }
 }

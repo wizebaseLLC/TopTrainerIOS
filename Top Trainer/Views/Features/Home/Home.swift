@@ -14,9 +14,13 @@ struct Home: View {
                 ZStack {
                     VStack {
                         FeatureHeader(title: "Featured Top Trainers", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
-                        FeaturedTrainerList()
+                        FeaturedHorizontalList(listData: TrainerSampleData)
                         FeatureHeader(title: "Today's Activity", shouldShowSeeAll: false, onSeeAllPress: {print("hi")})
+                            .padding(.bottom)
                         TodaysActivityGrid()
+                            .padding(.bottom)
+                        FeatureHeader(title: "Recipes For You", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
+                        FeaturedHorizontalList(listData: MealSampleData, showOpacity: true)
                     }
                     .padding(.top)
                 }
