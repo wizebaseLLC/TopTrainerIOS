@@ -34,7 +34,7 @@
 		1B7C58D528E7B1700051EDD0 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 1B7C58D428E7B1700051EDD0 /* Lottie */; };
 		1B7C58D828E7B48D0051EDD0 /* waterFill.json in Resources */ = {isa = PBXBuildFile; fileRef = 1B7C58D728E7B48D0051EDD0 /* waterFill.json */; };
 		1B7C58DA28E7B5940051EDD0 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C58D928E7B5940051EDD0 /* LottieView.swift */; };
-		1B7C58DC28F28AF00051EDD0 /* AnimatedNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C58DB28F28AF00051EDD0 /* AnimatedNumberView.swift */; };
+		1B7C58DC28F28AF00051EDD0 /* RollingNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7C58DB28F28AF00051EDD0 /* RollingNumberView.swift */; };
 		1B81A42C28E2149600E19529 /* BottomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81A42B28E2149600E19529 /* BottomTabView.swift */; };
 		1B81A42E28E2980600E19529 /* FeatureCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81A42D28E2980600E19529 /* FeatureCard.swift */; };
 		1B81A43028E2A26A00E19529 /* Trainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B81A42F28E2A26A00E19529 /* Trainer.swift */; };
@@ -104,7 +104,7 @@
 		1B7215FA289D6DD900F62653 /* FitnessLevelPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FitnessLevelPickerView.swift; sourceTree = "<group>"; };
 		1B7C58D728E7B48D0051EDD0 /* waterFill.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = waterFill.json; path = ../../../../../../Downloads/waterFill.json; sourceTree = "<group>"; };
 		1B7C58D928E7B5940051EDD0 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
-		1B7C58DB28F28AF00051EDD0 /* AnimatedNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedNumberView.swift; sourceTree = "<group>"; };
+		1B7C58DB28F28AF00051EDD0 /* RollingNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RollingNumberView.swift; sourceTree = "<group>"; };
 		1B81A42B28E2149600E19529 /* BottomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomTabView.swift; sourceTree = "<group>"; };
 		1B81A42D28E2980600E19529 /* FeatureCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeatureCard.swift; sourceTree = "<group>"; };
 		1B81A42F28E2A26A00E19529 /* Trainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trainer.swift; sourceTree = "<group>"; };
@@ -157,7 +157,6 @@
 			isa = PBXGroup;
 			children = (
 				1B56391B2899F1B60027DDA4 /* CardAnimations.swift */,
-				1B7C58DB28F28AF00051EDD0 /* AnimatedNumberView.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -370,6 +369,7 @@
 				1B81A43B28E2ADA500E19529 /* FeatureHeader.swift */,
 				1B494AF728E6371100D0731F /* CircleProgress.swift */,
 				1B494AF528E60C8900D0731F /* ActivityCard.swift */,
+				1B7C58DB28F28AF00051EDD0 /* RollingNumberView.swift */,
 				1B7C58D928E7B5940051EDD0 /* LottieView.swift */,
 			);
 			path = Views;
@@ -536,7 +536,7 @@
 				1B60C6202884D0DC00FDDF1E /* ContentView.swift in Sources */,
 				1B81A42E28E2980600E19529 /* FeatureCard.swift in Sources */,
 				1B60C61E2884D0DC00FDDF1E /* Top_TrainerApp.swift in Sources */,
-				1B7C58DC28F28AF00051EDD0 /* AnimatedNumberView.swift in Sources */,
+				1B7C58DC28F28AF00051EDD0 /* RollingNumberView.swift in Sources */,
 				1B9F5D9B289038B200BA88B7 /* GoalPickerView.swift in Sources */,
 				1B9F5D95288F9FEB00BA88B7 /* AgePickerView.swift in Sources */,
 				1B64A8072894C39A00A8638D /* InterestPickerView.swift in Sources */,

@@ -17,14 +17,15 @@ enum MetricType {
 }
 /// Card used to display a high level metric.
 struct ActivityCard: View {
-    /// Must be from 0.0 - 1.0 if cicle metric type.
+    /// Must be from 0.0 - 1.0 if cicle metric type.  This makes the circular progress animation
     let value: CGFloat
     let size: ActivityCardSizes
     let title: String
     let icon: String
     let iconColor: Color
     let metricType: MetricType
-    let metricValue: String
+    let metricValue: Double
+    let previousMetricValue: Double
     let metricDescription: String
     let metricColor: Color
     let backgroundColor: AnyGradient
@@ -81,9 +82,11 @@ struct ActivityCard: View {
         CircleProgress(progress: displayValue, color: metricColor, lineWidth: 8.0)
             .overlay(
                 VStack {
-                    Text(metricValue)
+                    RollingNumberView(to: metricValue, from: previousMetricValue)
                         .font(.title2)
+                        .fixedSize(horizontal: false, vertical: true)
                         .bold()
+                    
                     Text(metricDescription)
                         .font(.footnote)
                         .foregroundColor(.secondary)
@@ -101,31 +104,28 @@ struct ActivityCard: View {
         VStack(spacing: 0) {
             LottieView(lottieFile: "waterFill", shouldPlay: true, shouldLoop: false)
                 .clipShape(Circle())
-                .frame(width: size == .small ? 82 : 100, height: size == .small ? 82 : 100)
+                .frame(width: size == .small ? 60 : 82, height: size == .small ? 60 : 82)
             
-            Group {
-                Text("\(cupsOfWater)")
+            
+            HStack(alignment: .firstTextBaseline,spacing: 4) {
+                RollingNumberView(to: metricValue, from: previousMetricValue)
                     .font(.title.bold())
                     .foregroundColor(metricColor)
-                +
-                Text(" Cups")
+                    .lineLimit(1)
+                
+                Text("Cups")
                     .font(.footnote.bold())
                     .foregroundColor(metricColor)
             }
-            .lineLimit(1)
+            
         }
-        .onAppear {
-            if metricType == .water {
-                withAnimation {
-                    cupsOfWater = Int(metricValue) ?? 0
-                }
-            }
-        }
+        
     }
     
     var countView: some View {
         VStack(spacing: 8) {
-            Text(metricValue)
+            RollingNumberView(to: metricValue, from: previousMetricValue)
+                .font(.largeTitle)
                 .font(.largeTitle)
                 .fontWeight(.heavy)
                 .foregroundColor(metricColor)
@@ -166,20 +166,23 @@ struct ActivityCard: View {
             .frame(height: 75)
             
             Group {
-                Text("\(metricValue)")
-                    .font(.title.bold())
-                    .foregroundColor(.primary)
-                +
-                Text(" bpm")
-                    .font(.footnote.bold())
-                    .foregroundColor(.secondary)
+                HStack(alignment: .firstTextBaseline, spacing: 4){
+                    RollingNumberView(to: metricValue, from: previousMetricValue)
+                        .fixedSize(horizontal: false, vertical: true)
+                    
+                    Text(" bpm")
+                        .font(.footnote.bold())
+                        .foregroundColor(.secondary)
+                }
             }
+            .font(.title.bold())
+            .foregroundColor(.primary)
             .lineLimit(1)
         }
         .onAppear {
             for (i, v) in lineChartValues.enumerated() {
                 if lineChartItems.count < TodaysActivityGrid.heartRateCount{
-                    withAnimation(.easeInOut(duration: Double(lineChartValues.count - i))) { 
+                    withAnimation(.easeInOut(duration: Double(lineChartValues.count - i))) {
                         lineChartItems.insert(v, at: 0)
                     }
                 }
@@ -210,7 +213,8 @@ struct ActivityCard_Previews: PreviewProvider {
             icon: "heart.fill",
             iconColor: .pink,
             metricType: .lineChart,
-            metricValue: "\(Int(heartRateValues[heartRateValues.count - 1].count))",
+            metricValue: Double(heartRateValues[heartRateValues.count - 1].count),
+            previousMetricValue: 5,
             metricDescription: "45min",
             metricColor: .pink,
             backgroundColor: Color.black.gradient,

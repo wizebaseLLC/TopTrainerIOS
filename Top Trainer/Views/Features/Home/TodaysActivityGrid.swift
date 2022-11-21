@@ -9,109 +9,119 @@ import SwiftUI
 
 struct TodaysActivityGrid: View {
     
+    @State private var showingBottomSheet = false
+    
     let heartRateValues: [MetricModel] = getHeartRateValues()
     static let heartRateCount: Int = getHeartRateValues().count
     
     var body: some View {
-        Grid(horizontalSpacing: 16, verticalSpacing: 16) {
-            HStack(spacing: 16) {
-                VStack(spacing: 16)  {
-                    ActivityCard(
-                        value: 0.3,
-                        size: .small,
-                        title: "Training",
-                        icon: "figure.cross.training",
-                        iconColor: .primary,
-                        metricType: .count,
-                        metricValue: "12",
-                        metricDescription: "Working Sets",
-                        metricColor: Color("AccentColor"),
-                        backgroundColor: Color.black.gradient,
-                        shadowColor: Color("AccentColor"),
-                        onPress: { print("hi") }
-                    )
-                    
-                    ActivityCard(
-                        value: 0.8,
-                        size: .large,
-                        title: "Calories",
-                        icon: "fork.knife",
-                        iconColor: .primary,
-                        metricType: .circle,
-                        metricValue: "500",
-                        metricDescription: "kCals",
-                        metricColor: Color("Secondary"),
-                        backgroundColor: Color.black.gradient,
-                        shadowColor: Color("Secondary"),
-                        onPress: { print("hi") }
-                    )
-                    
-                    ActivityCard(
-                        value: 0.8,
-                        size: .medium,
-                        title: "Walk",
-                        icon: "figure.walk",
-                        iconColor: .black,
-                        metricType: .count,
-                        metricValue: "500",
-                        metricDescription: "Steps",
-                        metricColor: .blue,
-                        backgroundColor: Color.white.gradient,
-                        shadowColor: .blue,
-                        onPress: { print("hi") },
-                        titleColor: .black
-                    )
-                }
+        HStack(spacing: 16) {
+            VStack(spacing: 16)  {
+                ActivityCard(
+                    value: 0.3,
+                    size: .small,
+                    title: "Training",
+                    icon: "figure.cross.training",
+                    iconColor: .primary,
+                    metricType: .count,
+                    metricValue: 12,
+                    previousMetricValue: 6,
+                    metricDescription: "Working Sets",
+                    metricColor: Color("AccentColor"),
+                    backgroundColor: Color.black.gradient,
+                    shadowColor: Color("AccentColor"),
+                    onPress: { showingBottomSheet = true }
+                )
                 
-                VStack(spacing: 16)  {
-                    ActivityCard(
-                        value: 1.0,
-                        size: .large,
-                        title: "Heart",
-                        icon: "heart.fill",
-                        iconColor: .pink,
-                        metricType: .lineChart,
-                        metricValue: "\(Int(heartRateValues[heartRateValues.count - 1].count))",
-                        metricDescription: "45min",
-                        metricColor: .pink,
-                        backgroundColor: Color.black.gradient,
-                        shadowColor: .pink,
-                        onPress: { print("hi") },
-                        // Reversed so that the animation can start from the left.
-                        lineChartValues: heartRateValues.reversed()
-                    )
-                    
-                    ActivityCard(
-                        value: 0.5,
-                        size: .medium,
-                        title: "Water",
-                        icon: "drop.fill",
-                        iconColor: .primary,
-                        metricType: .water,
-                        metricValue: "8h",
-                        metricDescription: "45min",
-                        metricColor: .white,
-                        backgroundColor: Color.blue.gradient,
-                        shadowColor: .blue,
-                        onPress: { print("hi") }
-                    )
-                    
-                    ActivityCard(
-                        value: 1.0,
-                        size: .small,
-                        title: "Sleep",
-                        icon: "moon.stars.fill",
-                        iconColor: .purple,
-                        metricType: .circle,
-                        metricValue: "8h",
-                        metricDescription: "45min",
-                        metricColor: .purple,
-                        backgroundColor: Color.black.gradient,
-                        shadowColor: .purple,
-                        onPress: { print("hi") }
-                    )
-                }
+                ActivityCard(
+                    value: 0.8,
+                    size: .large,
+                    title: "Calories",
+                    icon: "fork.knife",
+                    iconColor: .primary,
+                    metricType: .circle,
+                    metricValue: 500,
+                    previousMetricValue: 6,
+                    metricDescription: "kCals",
+                    metricColor: Color("Secondary"),
+                    backgroundColor: Color.black.gradient,
+                    shadowColor: Color("Secondary"),
+                    onPress: { showingBottomSheet = true  }
+                )
+                
+                ActivityCard(
+                    value: 0.8,
+                    size: .medium,
+                    title: "Walk",
+                    icon: "figure.walk",
+                    iconColor: .black,
+                    metricType: .count,
+                    metricValue: 500,
+                    previousMetricValue: 16,
+                    metricDescription: "Steps",
+                    metricColor: .blue,
+                    backgroundColor: Color.white.gradient,
+                    shadowColor: .blue,
+                    onPress: { showingBottomSheet = true  },
+                    titleColor: .black
+                )
             }
+            
+            VStack(spacing: 16)  {
+                ActivityCard(
+                    value: 1.0,
+                    size: .large,
+                    title: "Heart",
+                    icon: "heart.fill",
+                    iconColor: .pink,
+                    metricType: .lineChart,
+                    metricValue: Double(heartRateValues[heartRateValues.count - 1].count),
+                    previousMetricValue: 6,
+                    metricDescription: "45min",
+                    metricColor: .pink,
+                    backgroundColor: Color.black.gradient,
+                    shadowColor: .pink,
+                    onPress: { showingBottomSheet = true },
+                    // Reversed so that the animation can start from the left.
+                    lineChartValues: heartRateValues.reversed()
+                )
+                
+                ActivityCard(
+                    value: 0.5,
+                    size: .medium,
+                    title: "Water",
+                    icon: "drop.fill",
+                    iconColor: .primary,
+                    metricType: .water,
+                    metricValue: 8,
+                    previousMetricValue: 3,
+                    metricDescription: "45min",
+                    metricColor: .white,
+                    backgroundColor: Color.blue.gradient,
+                    shadowColor: .blue,
+                    onPress: { showingBottomSheet = true }
+                )
+                
+                ActivityCard(
+                    value: 1.0,
+                    size: .small,
+                    title: "Sleep",
+                    icon: "moon.stars.fill",
+                    iconColor: .purple,
+                    metricType: .circle,
+                    metricValue: 8,
+                    previousMetricValue: 6,
+                    metricDescription: "Hours",
+                    metricColor: .purple,
+                    backgroundColor: Color.black.gradient,
+                    shadowColor: .purple,
+                    onPress: { showingBottomSheet = true }
+                )
+            }
+        }
+        .sheet(isPresented: $showingBottomSheet) {
+            Text("This app was brought to you by Hacking with Swift")
+                .presentationDetents([.large, .medium])
         }
     }
     
