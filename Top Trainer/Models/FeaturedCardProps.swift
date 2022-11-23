@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct FeaturedCardProps: Identifiable {
-    let id = UUID();
-    let displayName:  String;
-    let imageUrl: String;
+    let id = UUID()
+    let displayName:  String
+    let imageUrl: String
     let rating: Float
+    var extraDetails: String?
 }
 
 let TrainerSampleData: [FeaturedCardProps] = [
@@ -23,9 +24,9 @@ let TrainerSampleData: [FeaturedCardProps] = [
 ]
 
 let MealSampleData: [FeaturedCardProps] = [
-    FeaturedCardProps(displayName: "Pan Fried Duck Breast", imageUrl:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gordon-ramsay-duck-breast-pan-fried-duck-breast-1640261637.jpg?crop=0.6665xw:1xh;center,top&resize=480:*", rating: 4.2),
-    FeaturedCardProps(displayName: "Pan Seared Steak", imageUrl:"https://chefgordonramsayrecipe.com/wp-content/uploads/2017/05/Gordon-Ramsay-top-5-Steak-Recipes.jpg", rating: 3.5),
-    FeaturedCardProps(displayName: "Tasty Salmon", imageUrl:"https://chefgordonramsayrecipe.com/wp-content/uploads/2015/11/salmon1.jpg", rating: 5),
-    FeaturedCardProps(displayName: "Crusted Lamb Chops", imageUrl:"https://static1.therecipeimages.com/wordpress/wp-content/uploads/2018/11/gordon2.jpg", rating: 5),
+    FeaturedCardProps(displayName: "Pan Fried Duck Breast", imageUrl:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/gordon-ramsay-duck-breast-pan-fried-duck-breast-1640261637.jpg?crop=0.6665xw:1xh;center,top&resize=480:*", rating: 4.2, extraDetails: "550 \n kCals"),
+    FeaturedCardProps(displayName: "Pan Seared Steak", imageUrl:"https://chefgordonramsayrecipe.com/wp-content/uploads/2017/05/Gordon-Ramsay-top-5-Steak-Recipes.jpg", rating: 3.5, extraDetails: "880 \n kCals"),
+    FeaturedCardProps(displayName: "Tasty Salmon", imageUrl:"https://chefgordonramsayrecipe.com/wp-content/uploads/2015/11/salmon1.jpg", rating: 5, extraDetails: "350 \n kCals"),
+    FeaturedCardProps(displayName: "Crusted Lamb Chops", imageUrl:"https://static1.therecipeimages.com/wordpress/wp-content/uploads/2018/11/gordon2.jpg", rating: 5, extraDetails: "1200 \n kCals"),
 
 ]

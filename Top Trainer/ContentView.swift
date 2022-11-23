@@ -20,6 +20,5 @@ struct ContentView_Previews: PreviewProvider {
         Group {
             ContentView()
         }
-        // .preferredColorScheme(.dark)
     }
 }

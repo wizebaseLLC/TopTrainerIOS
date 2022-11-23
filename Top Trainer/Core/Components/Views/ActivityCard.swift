@@ -33,6 +33,8 @@ struct ActivityCard: View {
     let onPress: () -> Void
     var lineChartValues: [MetricModel] = .init()
     var titleColor: Color = .primary
+    var ruleMarkValue: Int?
+    var ruleMarkDescription: String?
     @State private var displayValue: CGFloat = 0;
     @State private var cupsOfWater: Int = 0;
     @State private var lineChartItems: [MetricModel] = []
@@ -152,6 +154,18 @@ struct ActivityCard: View {
                         .interpolationMethod(.catmullRom)
                     }
                 }
+                
+                if ruleMarkValue != nil {
+                    RuleMark(y: .value("value", ruleMarkValue!))
+                        .foregroundStyle(.white.opacity(0.4))
+                        .lineStyle(.init(dash: [5]))
+                        .annotation(position: .top, alignment: .trailing, spacing: 8) {
+                            Text("\(ruleMarkValue!) \(ruleMarkDescription ?? "")")
+                                .font(.caption)
+                                .bold()
+                                .foregroundColor(.secondary)
+                        }
+                }
             }
             .chartYAxis {
                 AxisMarks(position: .leading) { _ in }
@@ -164,6 +178,7 @@ struct ActivityCard: View {
             
             //          .background(.red)
             .frame(height: 75)
+            .padding(.horizontal)
             
             Group {
                 HStack(alignment: .firstTextBaseline, spacing: 4){
@@ -220,7 +235,9 @@ struct ActivityCard_Previews: PreviewProvider {
             backgroundColor: Color.black.gradient,
             shadowColor: .pink,
             onPress: { print("hi") },
-            lineChartValues: heartRateValues.reversed()
+            lineChartValues: heartRateValues.reversed(),
+            ruleMarkValue: 80,
+            ruleMarkDescription: "bpm"
         )
     }
 }

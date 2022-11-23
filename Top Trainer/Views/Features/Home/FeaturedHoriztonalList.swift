@@ -14,8 +14,8 @@ struct FeaturedHorizontalList: View {
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
-                ForEach(listData) { trainer in
-                    FeatureCard(item: trainer, onPress: {print("hi")}, showOpacity: showOpacity)
+                ForEach(listData) { data in
+                    FeatureCard(item: data, onPress: { print("hi") }, showOpacity: showOpacity, extraDetails: data.extraDetails, extraDetailsBackgroundColor: Color("Secondary"))
                         .padding(.trailing)
                         .padding(.top)
                         .padding(.bottom)
@@ -28,6 +28,6 @@ struct FeaturedHorizontalList: View {
 
 struct FeaturedHorizontalList_Previews: PreviewProvider {
     static var previews: some View {
-        FeaturedHorizontalList(listData: MealSampleData)
+        FeaturedHorizontalList(listData: MealSampleData,showOpacity: true)
     }
 }

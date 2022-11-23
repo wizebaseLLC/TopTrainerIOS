@@ -15,14 +15,37 @@ struct FeatureCard: View {
     var width: CGFloat = 314
     var height: CGFloat = 200
     var showOpacity: Bool = false
+    var extraDetails: String?
+    var extraDetailsBackgroundColor: Color?
     
     var body: some View {
         ZStack(alignment: .bottom) {
             imageBackground
             detailsPane
+            extraDetailsBubble
         }
         .foregroundColor(.primary)
         .frame(width: width, height: height)
+    }
+    
+    var extraDetailsBubble: some View {
+        VStack {
+            if extraDetails != nil {
+                HStack {
+                    Spacer()
+                    Text(extraDetails!)
+                        .multilineTextAlignment(.center)
+                        .lineLimit(2)
+                        .fontWeight(.heavy)
+                        .font(.caption)
+                        .padding()
+                        .background(Circle().fill(extraDetailsBackgroundColor ?? Color("Secondary")).blur(radius: 16))
+                        .padding(4)
+                        .frame(alignment: .topTrailing)
+                }
+                Spacer()
+            }
+        }
     }
     
     /// The image background
@@ -42,12 +65,12 @@ struct FeatureCard: View {
     var detailsPane: some View {
         Group {
             if showOpacity {
-                  detailBackgroundOpacity
+                detailBackgroundOpacity
                     .frame(height: 50)
                     .overlay(detailOverlay)
                     .allowsHitTesting(false)
             } else {
-                   detailBackgroundMaterial
+                detailBackgroundMaterial
                     .frame(height: 50)
                     .overlay(detailOverlay)
                     .allowsHitTesting(false)
@@ -58,7 +81,6 @@ struct FeatureCard: View {
     var detailBackgroundMaterial: some View {
         RoundedCornersShape(corners: [.bottomLeft, .bottomRight], radius: cornerRadius)
             .fill(Material.ultraThin)
-        
     }
     
     var detailBackgroundOpacity: some View {
@@ -89,6 +111,6 @@ struct FeatureCard: View {
 
 struct FeatureCard_Previews: PreviewProvider {
     static var previews: some View {
-        FeatureCard(item: TrainerSampleData[0], onPress: {print("hi")},showOpacity: true)
+        FeatureCard(item: TrainerSampleData[0], onPress: {print("hi")},showOpacity: true, extraDetails: "550 \n kCals")
     }
 }

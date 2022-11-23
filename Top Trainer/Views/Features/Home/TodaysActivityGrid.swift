@@ -83,7 +83,9 @@ struct TodaysActivityGrid: View {
                     shadowColor: .pink,
                     onPress: { showingBottomSheet = true },
                     // Reversed so that the animation can start from the left.
-                    lineChartValues: heartRateValues.reversed()
+                    lineChartValues: heartRateValues.reversed(),
+                    ruleMarkValue: 80,
+                    ruleMarkDescription: "bpm"
                 )
                 
                 ActivityCard(
@@ -139,15 +141,15 @@ struct TodaysActivityGrid: View {
         }
         
         return [
-            .init(type: getHour(8), count: 200),
-            .init(type: getHour(7), count: 75),
-            .init(type: getHour(6), count: 135),
-            .init(type: getHour(5), count: 140),
-            .init(type: getHour(4), count: 40),
+            .init(type: getHour(8), count: 170),
+            .init(type: getHour(7), count: 40),
+            .init(type: getHour(6), count: 95),
+            .init(type: getHour(5), count: 100),
+            .init(type: getHour(4), count: 85),
             .init(type: getHour(3), count: 90),
-            .init(type: getHour(2), count: 170),
-            .init(type: getHour(1), count: 120),
-            .init(type: getHour(0), count: 150)
+            .init(type: getHour(2), count: 50),
+            .init(type: getHour(1), count: 60),
+            .init(type: getHour(0), count: 75)
         ]
     }
     
