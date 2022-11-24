@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1B328D49292AC23B00EDFB59 /* MetricModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B328D48292AC23B00EDFB59 /* MetricModel.swift */; };
 		1B328D4F292D237500EDFB59 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B328D4E292D237500EDFB59 /* ImagePicker.swift */; };
+		1B328D51292E8E1100EDFB59 /* TodaysScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B328D50292E8E1100EDFB59 /* TodaysScheduleList.swift */; };
+		1B328D53292EDACA00EDFB59 /* WorkoutListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B328D52292EDACA00EDFB59 /* WorkoutListItem.swift */; };
 		1B494AF628E60C8900D0731F /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF528E60C8900D0731F /* ActivityCard.swift */; };
 		1B494AF828E6371100D0731F /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF728E6371100D0731F /* CircleProgress.swift */; };
 		1B494AFA28E655C500D0731F /* TodaysActivityGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */; };
@@ -77,6 +79,8 @@
 /* Begin PBXFileReference section */
 		1B328D48292AC23B00EDFB59 /* MetricModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetricModel.swift; sourceTree = "<group>"; };
 		1B328D4E292D237500EDFB59 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		1B328D50292E8E1100EDFB59 /* TodaysScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysScheduleList.swift; sourceTree = "<group>"; };
+		1B328D52292EDACA00EDFB59 /* WorkoutListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListItem.swift; sourceTree = "<group>"; };
 		1B494AF528E60C8900D0731F /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		1B494AF728E6371100D0731F /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysActivityGrid.swift; sourceTree = "<group>"; };
@@ -243,6 +247,7 @@
 				1B64A8082894C9F900A8638D /* Interest.swift */,
 				1B81A42F28E2A26A00E19529 /* FeaturedCardProps.swift */,
 				1B328D48292AC23B00EDFB59 /* MetricModel.swift */,
+				1B328D52292EDACA00EDFB59 /* WorkoutListItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -355,6 +360,7 @@
 				1B81A43828E2A81400E19529 /* Home.swift */,
 				1B81A43D28E2AE9000E19529 /* FeaturedHoriztonalList.swift */,
 				1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */,
+				1B328D50292E8E1100EDFB59 /* TodaysScheduleList.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 				1B328D49292AC23B00EDFB59 /* MetricModel.swift in Sources */,
 				1B60C6202884D0DC00FDDF1E /* ContentView.swift in Sources */,
 				1B81A42E28E2980600E19529 /* FeatureCard.swift in Sources */,
+				1B328D53292EDACA00EDFB59 /* WorkoutListItem.swift in Sources */,
 				1B60C61E2884D0DC00FDDF1E /* Top_TrainerApp.swift in Sources */,
 				1B7C58DC28F28AF00051EDD0 /* RollingNumberView.swift in Sources */,
 				1B9F5D9B289038B200BA88B7 /* GoalPickerView.swift in Sources */,
@@ -567,6 +574,7 @@
 				1B60C65F28864E7A00FDDF1E /* OnboardingView.swift in Sources */,
 				1B81A43328E2A47F00E19529 /* RoundedCornersShape.swift in Sources */,
 				1B60C6502884DA9200FDDF1E /* constants.swift in Sources */,
+				1B328D51292E8E1100EDFB59 /* TodaysScheduleList.swift in Sources */,
 				1BCA339F288D012400F54A07 /* PlaceholderModifier.swift in Sources */,
 				1B328D4F292D237500EDFB59 /* ImagePicker.swift in Sources */,
 				1B60C65D2884F41400FDDF1E /* GetStartedOnboarding.swift in Sources */,

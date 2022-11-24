@@ -37,7 +37,7 @@ struct FeatureCard: View {
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
                         .fontWeight(.heavy)
-                        .font(.caption)
+                        .font(.footnote)
                         .padding()
                         .background(Circle().fill(extraDetailsBackgroundColor ?? Color("Secondary")).blur(radius: 16))
                         .padding(4)

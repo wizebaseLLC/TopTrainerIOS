@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Home: View {
+    let shouldScheduleCountScroll = workoutListItemSampleData.count < 5
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -21,6 +22,16 @@ struct Home: View {
                             .padding(.bottom)
                         FeatureHeader(title: "Recipes For You", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
                         FeaturedHorizontalList(listData: MealSampleData, showOpacity: true)
+                            .padding(.bottom)
+                        FeatureHeader(title: "Today's Workout Schedule", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
+                        if shouldScheduleCountScroll {
+                            ScrollView {
+                                ScrollView { TodaysScheduleList().frame(height: 71 * CGFloat(workoutListItemSampleData.count)) }
+                            }
+                        }
+                        else {
+                            TodaysScheduleList().frame(height: 310)
+                        }
                     }
                     .padding(.top)
                 }
