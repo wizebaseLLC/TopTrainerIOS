@@ -14,6 +14,7 @@ struct TodaysScheduleList: View {
             List(workoutListItemSampleData) { item in
                 NavigationLink {
                     Text("Somewhere else")
+                        .lineLimit(1)
                 } label:  {
                     Label {
                         VStack(alignment: .leading, spacing: 4) {
@@ -22,6 +23,7 @@ struct TodaysScheduleList: View {
                                 Text(item.description!)
                                     .font(.caption)
                                     .foregroundColor(.secondary)
+                                    .lineLimit(3)
                             }
                         }
                     } icon: {

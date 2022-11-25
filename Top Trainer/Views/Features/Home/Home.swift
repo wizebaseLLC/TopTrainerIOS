@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Home: View {
-    let shouldScheduleCountScroll = workoutListItemSampleData.count < 5
+    let shouldScheduleCountScroll = workoutListItemSampleData.count
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -16,22 +16,21 @@ struct Home: View {
                     VStack {
                         FeatureHeader(title: "Featured Top Trainers", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
                         FeaturedHorizontalList(listData: TrainerSampleData)
-                        FeatureHeader(title: "Today's Activity", shouldShowSeeAll: false, onSeeAllPress: {print("hi")})
+                        FeatureHeader(title: "Today's Activity", shouldShowSeeAll: false)
                             .padding(.bottom)
                         TodaysActivityGrid()
                             .padding(.bottom)
                         FeatureHeader(title: "Recipes For You", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
                         FeaturedHorizontalList(listData: MealSampleData, showOpacity: true)
                             .padding(.bottom)
-                        FeatureHeader(title: "Today's Workout Schedule", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
-                        if shouldScheduleCountScroll {
-                            ScrollView {
-                                ScrollView { TodaysScheduleList().frame(height: 71 * CGFloat(workoutListItemSampleData.count)) }
-                            }
-                        }
-                        else {
+                        
+                        if shouldScheduleCountScroll > 0 {
+                            FeatureHeader(title: "Today's Workout Schedule", shouldShowSeeAll: true, onSeeAllPress: {print("hi")}, text: "Calendar")
                             TodaysScheduleList().frame(height: 310)
+                                .padding(.bottom)
                         }
+                        
+                    FeatureHeader(title: "Plan For Success", shouldShowSeeAll: false)
                     }
                     .padding(.top)
                 }

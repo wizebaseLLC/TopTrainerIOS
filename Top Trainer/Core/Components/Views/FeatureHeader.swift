@@ -10,19 +10,20 @@ import SwiftUI
 struct FeatureHeader: View {
     let title: String
     let shouldShowSeeAll: Bool
-    let onSeeAllPress: () -> Void?
+    var onSeeAllPress: (() -> Void)?
+    var text: String = "See all"
     
     var body: some View {
         HStack {
             Text(title)
                 .font(.title3.bold())
             
-            if shouldShowSeeAll {
+            if shouldShowSeeAll && onSeeAllPress != nil {
                 Spacer()
                 
-                Button {onSeeAllPress()} label: {
+                Button {onSeeAllPress!()} label: {
                     HStack(spacing: 4) {
-                        Text("See all")
+                        Text(text)
                         Image(systemName: "chevron.right")
                     }
                     .font(.footnote)
@@ -38,6 +39,6 @@ struct FeatureHeader: View {
 
 struct FeatureHeader_Previews: PreviewProvider {
     static var previews: some View {
-        FeatureHeader(title: "Featured Top Trainers", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
+        FeatureHeader(title: "Featured Top Trainers", shouldShowSeeAll: false)
     }
 }
