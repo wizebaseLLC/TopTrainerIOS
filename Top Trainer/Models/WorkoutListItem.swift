@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WorkoutListItem: Identifiable {
+struct WorkoutListItem: Identifiable, Hashable {
     var id = UUID()
     let name: String
     let imageUrl: String

@@ -20,6 +20,9 @@ struct Home: View {
                             .padding(.bottom)
                         TodaysActivityGrid()
                             .padding(.bottom)
+                        FeatureHeader(title: "Plan For Success", shouldShowSeeAll: false)
+                        MealTimeHorizontalList()
+                            .padding(.bottom)
                         FeatureHeader(title: "Recipes For You", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
                         FeaturedHorizontalList(listData: MealSampleData, showOpacity: true)
                             .padding(.bottom)
@@ -30,9 +33,10 @@ struct Home: View {
                                 .padding(.bottom)
                         }
                         
-                    FeatureHeader(title: "Plan For Success", shouldShowSeeAll: false)
+        
                     }
                     .padding(.top)
+                    .padding(.bottom)
                 }
             }
             .scrollIndicators(.hidden)

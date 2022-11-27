@@ -11,6 +11,8 @@
 		1B328D4F292D237500EDFB59 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B328D4E292D237500EDFB59 /* ImagePicker.swift */; };
 		1B328D51292E8E1100EDFB59 /* TodaysScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B328D50292E8E1100EDFB59 /* TodaysScheduleList.swift */; };
 		1B328D53292EDACA00EDFB59 /* WorkoutListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B328D52292EDACA00EDFB59 /* WorkoutListItem.swift */; };
+		1B328D5529341E3100EDFB59 /* MealTimeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B328D5429341E3100EDFB59 /* MealTimeCard.swift */; };
+		1B328D57293425D400EDFB59 /* MealTimeHorizontalList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B328D56293425D400EDFB59 /* MealTimeHorizontalList.swift */; };
 		1B494AF628E60C8900D0731F /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF528E60C8900D0731F /* ActivityCard.swift */; };
 		1B494AF828E6371100D0731F /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF728E6371100D0731F /* CircleProgress.swift */; };
 		1B494AFA28E655C500D0731F /* TodaysActivityGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */; };
@@ -81,6 +83,8 @@
 		1B328D4E292D237500EDFB59 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		1B328D50292E8E1100EDFB59 /* TodaysScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysScheduleList.swift; sourceTree = "<group>"; };
 		1B328D52292EDACA00EDFB59 /* WorkoutListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutListItem.swift; sourceTree = "<group>"; };
+		1B328D5429341E3100EDFB59 /* MealTimeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTimeCard.swift; sourceTree = "<group>"; };
+		1B328D56293425D400EDFB59 /* MealTimeHorizontalList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealTimeHorizontalList.swift; sourceTree = "<group>"; };
 		1B494AF528E60C8900D0731F /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		1B494AF728E6371100D0731F /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysActivityGrid.swift; sourceTree = "<group>"; };
@@ -361,6 +365,7 @@
 				1B81A43D28E2AE9000E19529 /* FeaturedHoriztonalList.swift */,
 				1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */,
 				1B328D50292E8E1100EDFB59 /* TodaysScheduleList.swift */,
+				1B328D56293425D400EDFB59 /* MealTimeHorizontalList.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 				1B494AF528E60C8900D0731F /* ActivityCard.swift */,
 				1B7C58DB28F28AF00051EDD0 /* RollingNumberView.swift */,
 				1B7C58D928E7B5940051EDD0 /* LottieView.swift */,
+				1B328D5429341E3100EDFB59 /* MealTimeCard.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -539,6 +545,7 @@
 			files = (
 				1B60C6572884EF1500FDDF1E /* OnboardingB.swift in Sources */,
 				1B328D49292AC23B00EDFB59 /* MetricModel.swift in Sources */,
+				1B328D5529341E3100EDFB59 /* MealTimeCard.swift in Sources */,
 				1B60C6202884D0DC00FDDF1E /* ContentView.swift in Sources */,
 				1B81A42E28E2980600E19529 /* FeatureCard.swift in Sources */,
 				1B328D53292EDACA00EDFB59 /* WorkoutListItem.swift in Sources */,
@@ -579,6 +586,7 @@
 				1B328D4F292D237500EDFB59 /* ImagePicker.swift in Sources */,
 				1B60C65D2884F41400FDDF1E /* GetStartedOnboarding.swift in Sources */,
 				1B81A43E28E2AE9000E19529 /* FeaturedHoriztonalList.swift in Sources */,
+				1B328D57293425D400EDFB59 /* MealTimeHorizontalList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

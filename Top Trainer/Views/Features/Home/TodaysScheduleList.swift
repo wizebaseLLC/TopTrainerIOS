@@ -12,10 +12,7 @@ struct TodaysScheduleList: View {
     var body: some View {
         NavigationStack {
             List(workoutListItemSampleData) { item in
-                NavigationLink {
-                    Text("Somewhere else")
-                        .lineLimit(1)
-                } label:  {
+                NavigationLink(value: item) {
                     Label {
                         VStack(alignment: .leading, spacing: 4) {
                             Text(item.name)
@@ -38,8 +35,13 @@ struct TodaysScheduleList: View {
                     }
                     
                 }
+                
             }
             .scrollContentBackground(.hidden)
+            .navigationDestination(for: WorkoutListItem.self) { _ in
+                Text("Somewhere else")
+                    .lineLimit(1)
+            }
         }
     }
 }
