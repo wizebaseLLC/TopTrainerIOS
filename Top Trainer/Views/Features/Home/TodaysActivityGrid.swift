@@ -125,6 +125,10 @@ struct TodaysActivityGrid: View {
             Text("This app was brought to you by Hacking with Swift")
                 .presentationDetents([.large, .medium])
         }
+        .padding(.top)
+        .padding(.top)
+        .padding(.bottom)
+        .padding(.bottom)
     }
     
     // Gets the values of the heart rate.

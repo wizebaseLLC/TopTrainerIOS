@@ -14,26 +14,39 @@ struct Home: View {
             ScrollView {
                 ZStack {
                     VStack {
-                        FeatureHeader(title: "Featured Top Trainers", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
-                        FeaturedHorizontalList(listData: TrainerSampleData)
-                        FeatureHeader(title: "Today's Activity", shouldShowSeeAll: false)
-                            .padding(.bottom)
-                        TodaysActivityGrid()
-                            .padding(.bottom)
-                        FeatureHeader(title: "Plan For Success", shouldShowSeeAll: false)
-                        MealTimeHorizontalList()
-                            .padding(.bottom)
-                        FeatureHeader(title: "Recipes For You", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
-                        FeaturedHorizontalList(listData: MealSampleData, showOpacity: true)
-                            .padding(.bottom)
+                        VStack {
+                            FeatureHeader(title: "Featured Top Trainers", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
+                            FeaturedHorizontalList(listData: TrainerSampleData)
+                        }
+                        VStack {
+                            FeatureHeader(title: "Today's Activity", shouldShowSeeAll: false)
+                                .padding(.bottom)
+                            TodaysActivityGrid()
+                        }
+                        .padding(.bottom)
+                        VStack {
+                            FeatureHeader(title: "Plan For Success", shouldShowSeeAll: false)
+                            MealTimeHorizontalList()
+                        }
+                        .padding(.bottom)
+                        VStack {
+                            FeatureHeader(title: "Cookbooks For You", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
+                            FeaturedHorizontalList(listData: MealSampleData, showOpacity: true)
+                        }
+                        .padding(.bottom)
                         
                         if shouldScheduleCountScroll > 0 {
-                            FeatureHeader(title: "Today's Workout Schedule", shouldShowSeeAll: true, onSeeAllPress: {print("hi")}, text: "Calendar")
-                            TodaysScheduleList().frame(height: 310)
-                                .padding(.bottom)
+                            VStack {
+                                FeatureHeader(title: "Today's Workout Schedule", shouldShowSeeAll: true, onSeeAllPress: {print("hi")}, text: "Calendar")
+                                TodaysScheduleList().frame(height: 310)
+                            }
+                            .padding(.bottom)
+                        }
+                        VStack {
+                            FeatureHeader(title: "Workouts You May Enjoy", shouldShowSeeAll: true, onSeeAllPress: {print("hi")})
+                            FeaturedHorizontalList(listData: WorkoutSampleData, extraDetailsBackgroundColor: Color("AccentColor"),shouldShowDisplayNameAbove: true)
                         }
                         
-        
                     }
                     .padding(.top)
                     .padding(.bottom)

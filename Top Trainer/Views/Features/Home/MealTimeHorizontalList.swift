@@ -21,7 +21,9 @@ struct MealTimeHorizontalList: View {
                     MealTimeCard(imageUrl: data.url, title: data.name, onPress: {})
                         .padding(.trailing)
                         .padding(.top)
-                        .padding(.bottom, 25)
+                        .padding(.top)
+                        .padding(.bottom)
+                        .padding(.bottom)
                 }
             }
             .padding(.horizontal)

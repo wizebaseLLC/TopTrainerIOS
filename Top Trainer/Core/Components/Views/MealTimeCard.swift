@@ -19,25 +19,26 @@ struct MealTimeCard: View {
         Button { onPress() } label:  {
             ZStack(alignment: .bottom) {
                 imageBackground
+                
+                    .frame(width: width, height: height)
+                    .cornerRadius(60)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 60.0)
+                            .stroke(lineWidth: 6)
+                    )
             }
-            .frame(width: width, height: height)
-            .cornerRadius(60)
-            .overlay(
-                RoundedRectangle(cornerRadius: 60.0)
-                    .stroke(lineWidth: 6)
-            )
-        }
-        .buttonStyle(.plain)
             .overlay(alignment: .bottom) {
                 detailPane
             }
+        }
+        .buttonStyle(.plain)
     }
     
     var detailPane: some View {
         Text(title)
             .foregroundStyle(.black)
             .font(.headline)
-           .fontWeight(.heavy)
+            .fontWeight(.heavy)
             .padding()
             .frame(width: 200, height: 50)
             .background(Capsule().fill(.white))
@@ -47,13 +48,13 @@ struct MealTimeCard: View {
     
     /// The image background
     var imageBackground: some View {
-            CachedAsyncImage(url: URL(string: imageUrl)) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
-            }
-           // .cornerRadius(30)
-            .shadow(color: .black.opacity(0.6), radius: 16, x: 8, y: 8 )
+        CachedAsyncImage(url: URL(string: imageUrl)) { image in
+            image.resizable()
+        } placeholder: {
+            ProgressView()
+        }
+        // .cornerRadius(30)
+        .shadow(color: .black.opacity(0.6), radius: 16, x: 8, y: 8 )
     }
 }
 

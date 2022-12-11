@@ -16,6 +16,7 @@
 		1B494AF628E60C8900D0731F /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF528E60C8900D0731F /* ActivityCard.swift */; };
 		1B494AF828E6371100D0731F /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF728E6371100D0731F /* CircleProgress.swift */; };
 		1B494AFA28E655C500D0731F /* TodaysActivityGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */; };
+		1B4BA2CD29469940003BC718 /* TrainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4BA2CC29469940003BC718 /* TrainerView.swift */; };
 		1B56391C2899F1B60027DDA4 /* CardAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B56391B2899F1B60027DDA4 /* CardAnimations.swift */; };
 		1B60C61E2884D0DC00FDDF1E /* Top_TrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C61D2884D0DC00FDDF1E /* Top_TrainerApp.swift */; };
 		1B60C6202884D0DC00FDDF1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C61F2884D0DC00FDDF1E /* ContentView.swift */; };
@@ -88,6 +89,7 @@
 		1B494AF528E60C8900D0731F /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
 		1B494AF728E6371100D0731F /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysActivityGrid.swift; sourceTree = "<group>"; };
+		1B4BA2CC29469940003BC718 /* TrainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerView.swift; sourceTree = "<group>"; };
 		1B56391B2899F1B60027DDA4 /* CardAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimations.swift; sourceTree = "<group>"; };
 		1B60C61A2884D0DC00FDDF1E /* Top Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B60C61D2884D0DC00FDDF1E /* Top_TrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top_TrainerApp.swift; sourceTree = "<group>"; };
@@ -161,6 +163,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1B4BA2CB29469928003BC718 /* Trainer */ = {
+			isa = PBXGroup;
+			children = (
+				1B4BA2CC29469940003BC718 /* TrainerView.swift */,
+			);
+			path = Trainer;
+			sourceTree = "<group>";
+		};
 		1B56391A2899F1A30027DDA4 /* Animations */ = {
 			isa = PBXGroup;
 			children = (
@@ -286,6 +296,7 @@
 		1B60C6512884DDBF00FDDF1E /* Features */ = {
 			isa = PBXGroup;
 			children = (
+				1B4BA2CB29469928003BC718 /* Trainer */,
 				1B81A43728E2A80500E19529 /* Home */,
 				1B81A42A28E2146800E19529 /* BottomTabs */,
 				1B9F5D8D288F1B2B00BA88B7 /* CreateInitialProfile */,
@@ -554,6 +565,7 @@
 				1B9F5D9B289038B200BA88B7 /* GoalPickerView.swift in Sources */,
 				1B9F5D95288F9FEB00BA88B7 /* AgePickerView.swift in Sources */,
 				1B64A8072894C39A00A8638D /* InterestPickerView.swift in Sources */,
+				1B4BA2CD29469940003BC718 /* TrainerView.swift in Sources */,
 				1B60C6622886510300FDDF1E /* LoginView.swift in Sources */,
 				1B9F5D97288FA53800BA88B7 /* HeightPickerView.swift in Sources */,
 				1B81A43028E2A26A00E19529 /* FeaturedCardProps.swift in Sources */,

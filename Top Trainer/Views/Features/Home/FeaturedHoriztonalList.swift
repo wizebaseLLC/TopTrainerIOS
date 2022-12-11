@@ -10,14 +10,18 @@ import SwiftUI
 struct FeaturedHorizontalList: View {
     let listData: [FeaturedCardProps]
     var showOpacity: Bool = false
+    var extraDetailsBackgroundColor = Color("Secondary")
+    var shouldShowDisplayNameAbove = false
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
                 ForEach(listData) { data in
-                    FeatureCard(item: data, onPress: { print("hi") }, showOpacity: showOpacity, extraDetails: data.extraDetails, extraDetailsBackgroundColor: Color("Secondary"))
+                    FeatureCard(item: data, onPress: { print("hi") },showOpacity: showOpacity, shouldShowDisplayNameAbove: shouldShowDisplayNameAbove, extraDetailsBackgroundColor: extraDetailsBackgroundColor)
                         .padding(.trailing)
                         .padding(.top)
+                        .padding(.top)
+                        .padding(.bottom)
                         .padding(.bottom)
                 }
             }

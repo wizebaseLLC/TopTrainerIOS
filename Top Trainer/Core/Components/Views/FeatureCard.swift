@@ -15,7 +15,7 @@ struct FeatureCard: View {
     var width: CGFloat = 314
     var height: CGFloat = 200
     var showOpacity: Bool = false
-    var extraDetails: String?
+    var shouldShowDisplayNameAbove = false
     var extraDetailsBackgroundColor: Color?
     
     var body: some View {
@@ -30,14 +30,13 @@ struct FeatureCard: View {
     
     var extraDetailsBubble: some View {
         VStack {
-            if extraDetails != nil {
+            if let extraDetails = item.extraDetails {
                 HStack {
                     Spacer()
-                    Text(extraDetails!)
+                    Text(extraDetails)
                         .multilineTextAlignment(.center)
                         .lineLimit(2)
                         .fontWeight(.heavy)
-                        .font(.footnote)
                         .padding()
                         .background(Circle().fill(extraDetailsBackgroundColor ?? Color("Secondary")).blur(radius: 16))
                         .padding(4)
@@ -50,14 +49,22 @@ struct FeatureCard: View {
     
     /// The image background
     var imageBackground: some View {
-        Button { onPress() } label:  {
-            CachedAsyncImage(url: URL(string: item.imageUrl)) { image in
-                image.resizable()
-            } placeholder: {
-                ProgressView()
+        ZStack {
+            Button { onPress() } label:  {
+                CachedAsyncImage(url: URL(string: item.imageUrl)) { image in
+                    image.resizable()
+                } placeholder: {
+                    ProgressView()
+                }
+                .overlay(shouldShowDisplayNameAbove ? Color.black.opacity(0.4) : nil)
+                .cornerRadius(cornerRadius)
+                .shadow(color: .black.opacity(0.6), radius: 16, x: 8, y: 8 )
             }
-            .cornerRadius(cornerRadius)
-            .shadow(color: .black.opacity(0.6), radius: 16, x: 8, y: 8 )
+            if shouldShowDisplayNameAbove {
+                Text(item.displayName)
+                    .fontWeight(.heavy)
+                    .lineLimit(1)
+            }
         }
     }
     
@@ -90,8 +97,27 @@ struct FeatureCard: View {
     
     var detailOverlay: some View {
         HStack {
-            Text(item.displayName)
-                .fontWeight(.heavy)
+            if let trainer = item.trainer {
+                Label {
+                    Text(trainer.name)
+                        .fontWeight(.heavy)
+                } icon: {
+                    CachedAsyncImage(url: URL(string: trainer.imageUrl)) { image in
+                        image.resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 40, height: 40)
+                            .clipShape(Circle())
+                    } placeholder: {
+                        ProgressView()
+                    }
+                }
+                
+            } else {
+                if !shouldShowDisplayNameAbove {
+                    Text(item.displayName)
+                        .fontWeight(.heavy)
+                }
+            }
             Spacer()
             Label {
                 Text("\(item.rating.formatted(.number.precision(.fractionLength(1))))")
@@ -111,6 +137,10 @@ struct FeatureCard: View {
 
 struct FeatureCard_Previews: PreviewProvider {
     static var previews: some View {
-        FeatureCard(item: TrainerSampleData[0], onPress: {print("hi")},showOpacity: true, extraDetails: "550 \n kCals")
+        ZStack {
+            //  Color.white
+            FeatureCard(item: WorkoutSampleData[0], onPress: {print("hi")},showOpacity: false, shouldShowDisplayNameAbove: true, extraDetailsBackgroundColor: Color("AccentColor"))
+        }
+        
     }
 }

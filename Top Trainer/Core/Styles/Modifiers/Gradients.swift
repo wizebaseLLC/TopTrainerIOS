@@ -64,7 +64,6 @@ struct GradientBackground: ViewModifier {
     }
 }
 
-
 extension View {
     func gradientBackground() -> some View {
         modifier(GradientBackground())
