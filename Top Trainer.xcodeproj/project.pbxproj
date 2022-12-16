@@ -17,6 +17,8 @@
 		1B494AF828E6371100D0731F /* CircleProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF728E6371100D0731F /* CircleProgress.swift */; };
 		1B494AFA28E655C500D0731F /* TodaysActivityGrid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */; };
 		1B4BA2CD29469940003BC718 /* TrainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4BA2CC29469940003BC718 /* TrainerView.swift */; };
+		1B4BA2D12946A73E003BC718 /* TrainerHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B4BA2D02946A73E003BC718 /* TrainerHeaderView.swift */; };
+		1B5583F5294CEA9E00C438B7 /* BlurredSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B5583F4294CEA9E00C438B7 /* BlurredSheet.swift */; };
 		1B56391C2899F1B60027DDA4 /* CardAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B56391B2899F1B60027DDA4 /* CardAnimations.swift */; };
 		1B60C61E2884D0DC00FDDF1E /* Top_TrainerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C61D2884D0DC00FDDF1E /* Top_TrainerApp.swift */; };
 		1B60C6202884D0DC00FDDF1E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B60C61F2884D0DC00FDDF1E /* ContentView.swift */; };
@@ -90,6 +92,8 @@
 		1B494AF728E6371100D0731F /* CircleProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgress.swift; sourceTree = "<group>"; };
 		1B494AF928E655C500D0731F /* TodaysActivityGrid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysActivityGrid.swift; sourceTree = "<group>"; };
 		1B4BA2CC29469940003BC718 /* TrainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerView.swift; sourceTree = "<group>"; };
+		1B4BA2D02946A73E003BC718 /* TrainerHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainerHeaderView.swift; sourceTree = "<group>"; };
+		1B5583F4294CEA9E00C438B7 /* BlurredSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurredSheet.swift; sourceTree = "<group>"; };
 		1B56391B2899F1B60027DDA4 /* CardAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardAnimations.swift; sourceTree = "<group>"; };
 		1B60C61A2884D0DC00FDDF1E /* Top Trainer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Top Trainer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1B60C61D2884D0DC00FDDF1E /* Top_TrainerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Top_TrainerApp.swift; sourceTree = "<group>"; };
@@ -167,6 +171,7 @@
 			isa = PBXGroup;
 			children = (
 				1B4BA2CC29469940003BC718 /* TrainerView.swift */,
+				1B4BA2D02946A73E003BC718 /* TrainerHeaderView.swift */,
 			);
 			path = Trainer;
 			sourceTree = "<group>";
@@ -281,6 +286,7 @@
 				1B60C64C2884D8BA00FDDF1E /* Gradients.swift */,
 				1BCA339A288CD64E00F54A07 /* CapsuleTextFieldModifier.swift */,
 				1BCA339E288D012400F54A07 /* PlaceholderModifier.swift */,
+				1B5583F4294CEA9E00C438B7 /* BlurredSheet.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -555,6 +561,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1B60C6572884EF1500FDDF1E /* OnboardingB.swift in Sources */,
+				1B5583F5294CEA9E00C438B7 /* BlurredSheet.swift in Sources */,
 				1B328D49292AC23B00EDFB59 /* MetricModel.swift in Sources */,
 				1B328D5529341E3100EDFB59 /* MealTimeCard.swift in Sources */,
 				1B60C6202884D0DC00FDDF1E /* ContentView.swift in Sources */,
@@ -591,6 +598,7 @@
 				1BCA339B288CD64E00F54A07 /* CapsuleTextFieldModifier.swift in Sources */,
 				1BB55DAB288D954B00FD4F2E /* ForgotPasswordView.swift in Sources */,
 				1B60C65F28864E7A00FDDF1E /* OnboardingView.swift in Sources */,
+				1B4BA2D12946A73E003BC718 /* TrainerHeaderView.swift in Sources */,
 				1B81A43328E2A47F00E19529 /* RoundedCornersShape.swift in Sources */,
 				1B60C6502884DA9200FDDF1E /* constants.swift in Sources */,
 				1B328D51292E8E1100EDFB59 /* TodaysScheduleList.swift in Sources */,
