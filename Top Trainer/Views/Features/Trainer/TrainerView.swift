@@ -9,60 +9,66 @@ import SwiftUI
 import CachedAsyncImage
 
 struct TrainerView: View {
+    let id: String
     let imageUrl: String
     let name: String
+    var animation: Namespace.ID
+    @Binding var selectedItem: FeaturedCardProps?
+    @State private var isDisabled = true
     
     var body: some View {
-        ScrollView(showsIndicators: false) {
+        ZStack(alignment: .top) {
             VStack {
-                ZStack(alignment: .top)   {
-                    Rectangle()
-                        .fill(.cyan)
-                        .cornerRadius(80, corners: [.bottomRight])
-                        .shadow(color: .cyan, radius: 16)
-                        .frame(height: 557)
-                        .overlay(
-                            Text("Hello")
-                                .foregroundColor(.white)
-                                .font(.headline)
-                                .frame(height: 557)
-                                .offset(x: 0, y: (308 + 448) - 557)
-                        )
-                    Rectangle()
-                        .fill(.indigo)
-                        .cornerRadius(80, corners: [.bottomRight])
-                        .shadow(color: .indigo, radius: 16)
-                        .frame(height: 448)
-                        .overlay(
-                            Text("Hello")
-                                .foregroundColor(.white)
-                                .font(.headline)
-                                .offset(x: 0, y: 557 - 448)
-                                .frame(height: 448)
-                        )
-                    
-                    CachedAsyncImage(url: URL(string: imageUrl)) { image in
-                        image.resizable()
-                        //     .aspectRatio(contentMode: .fill)
-                            .frame(height: 308)
-                    } placeholder: {
-                        ProgressView()
+                ScrollView(showsIndicators: false) {
+                    VStack {
+                        TrainerHeaderView(id: id, imageUrl: imageUrl, name: name, animation: animation )
                     }
-                    .cornerRadius(80, corners: [.bottomRight])
-                    .shadow(color: Color("Background"), radius: 16)
-                    
+                }
+                .background(.black)
+                .edgesIgnoringSafeArea(.top)
+            }
+            HStack {
+                Spacer()
+                Button {
+                    withAnimation(.easeInOut) {
+                        selectedItem = nil
+                    }
+                } label: {
+                    Image(systemName: "xmark")
+                        .font(.title2.bold())
+                        .padding(8)
                     
                 }
+                .disabled(isDisabled)
+                .background(.black.opacity(0.7))
+                .buttonStyle(.bordered)
+                .clipShape(Circle())
+                .toolbar(.hidden, for: .tabBar)
+                .toolbar(.hidden, for: .navigationBar)
+                .opacity(isDisabled ? 0 : 1)
             }
         }
-        .gradientBackground()
-        .edgesIgnoringSafeArea(.top)
+        .task {
+            do {
+                let duration = UInt64(0.5 * 1_000_000_000)
+                try await Task.sleep(nanoseconds: duration)
+                await MainActor.run {
+                    withAnimation {
+                        isDisabled = false
+                    }
+                }
+            }
+            catch {
+                print(error)
+            }
+        }
     }
 }
 
 struct TrainerView_Previews: PreviewProvider {
+    @Namespace static var nameSpace
     static var previews: some View {
-        TrainerView(imageUrl: TrainerSampleData[0].imageUrl, name: TrainerSampleData[0].displayName)
+        TrainerView(id: UUID().uuidString ,imageUrl: TrainerSampleData[0].imageUrl, name: TrainerSampleData[0].displayName, animation: nameSpace, selectedItem: .constant(nil))
     }
 }
 

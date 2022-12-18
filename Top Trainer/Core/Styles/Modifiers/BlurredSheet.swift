@@ -8,9 +8,14 @@
 import SwiftUI
 
 extension View {
-    func blurredSheet<Content: View>(_ style: AnyShapeStyle, show: Binding<Bool>, onDismiss: @escaping () -> (), @ViewBuilder content: @escaping () -> Content) -> some View {
+    func sheet<Content: View>(
+        _ style: AnyShapeStyle,
+        isPresented: Binding<Bool>,
+        onDismiss: @escaping () -> (),
+        @ViewBuilder content: @escaping () -> Content
+    ) -> some View {
         self
-            .sheet(isPresented: show, onDismiss: onDismiss) {
+            .sheet(isPresented: isPresented, onDismiss: onDismiss) {
                 content()
                     .background(RemoveBackgroundColor())
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -22,9 +27,14 @@ extension View {
             }
     }
     
-    func blurredFullScreenCover<Content: View>(_ style: AnyShapeStyle, show: Binding<Bool>, onDismiss: @escaping () -> (), @ViewBuilder content: @escaping () -> Content) -> some View {
+    func fullScreenCover<Content: View>(
+        _ style: AnyShapeStyle,
+        isPresented: Binding<Bool>,
+        onDismiss: @escaping () -> (),
+        @ViewBuilder content: @escaping () -> Content
+    ) -> some View {
         self
-            .fullScreenCover(isPresented: show, onDismiss: onDismiss) {
+            .fullScreenCover(isPresented: isPresented, onDismiss: onDismiss) {
                 content()
                     .background(RemoveBackgroundColor())
                     .frame(maxWidth: .infinity, maxHeight: .infinity)

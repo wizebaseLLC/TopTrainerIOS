@@ -121,7 +121,7 @@ struct TodaysActivityGrid: View {
                 )
             }
         }
-        .blurredSheet(.init(.ultraThinMaterial),show: $showingBottomSheet, onDismiss: {})  {
+        .sheet(.init(.ultraThinMaterial), isPresented: $showingBottomSheet, onDismiss: {})  {
             Text("This app was brought to you by Hacking with Swift")
                 .presentationDetents([.large, .medium])
         }

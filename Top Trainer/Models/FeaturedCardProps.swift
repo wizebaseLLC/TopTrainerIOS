@@ -21,6 +21,8 @@ struct FeaturedCardProps: Identifiable {
     }
 }
 
+
+
 let TrainerSampleData: [FeaturedCardProps] = [
     .init(displayName: "Roman Reigns", imageUrl:"https://www.pwmania.com/wp-content/uploads/2022/11/roman-reigns-heyman.jpg", rating: 5),
     .init(displayName: "The Rock", imageUrl:"https://www.muscleandfitness.com/wp-content/uploads/2017/06/The-Rock-Dwayne-Johnson-Cable-Crossover-Promo.jpg?w=1180&quality=86&strip=all", rating: 3.5
