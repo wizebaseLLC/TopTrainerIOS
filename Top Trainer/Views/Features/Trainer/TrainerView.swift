@@ -23,6 +23,7 @@ struct TrainerView: View {
                     VStack {
                         TrainerHeaderView(id: id, imageUrl: imageUrl, name: name, animation: animation )
                     }
+                    
                 }
                 .background(.black)
                 .edgesIgnoringSafeArea(.top)
@@ -30,7 +31,7 @@ struct TrainerView: View {
             HStack {
                 Spacer()
                 Button {
-                    withAnimation(.easeInOut) {
+                    withAnimation(.easeIn) {
                         selectedItem = nil
                     }
                 } label: {
@@ -48,6 +49,7 @@ struct TrainerView: View {
                 .opacity(isDisabled ? 0 : 1)
             }
         }
+        .zIndex(2)
         .task {
             do {
                 let duration = UInt64(0.5 * 1_000_000_000)

@@ -14,42 +14,36 @@ struct FeaturedHorizontalList: View {
     var shouldShowDisplayNameAbove = false
     @Binding var selectedItem: FeaturedCardProps?
     var animation: Namespace.ID
-    @State var isDisabled = false
+    var width: CGFloat = 314
+    var height: CGFloat = 200
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false) {
             LazyHStack {
                 ForEach(listData) { data in
-                    FeatureCard(item: data, onPress: {
-                        withAnimation(.easeInOut) {
-                            selectedItem = data
-                        }
-                    },showOpacity: showOpacity, shouldShowDisplayNameAbove: shouldShowDisplayNameAbove, extraDetailsBackgroundColor: extraDetailsBackgroundColor, animation: animation)
-                    .disabled(isDisabled)
+                    if data.id != selectedItem?.id{
+                        FeatureCard(item: data, onPress: {
+                                withAnimation(.easeOut) {
+                                    selectedItem = data
+                                }
+                        },showOpacity: showOpacity, shouldShowDisplayNameAbove: shouldShowDisplayNameAbove, extraDetailsBackgroundColor: extraDetailsBackgroundColor, animation: animation)
                         .padding(.trailing)
                         .padding(.top)
                         .padding(.top)
                         .padding(.bottom)
                         .padding(.bottom)
-                }
-            }
-            .padding(.horizontal)
-        }
-        .onChange(of: selectedItem?.id) { newValue in
-            if newValue != nil {
-                    isDisabled = true
-                
-            } else {
-                Task {
-                    let duration = UInt64(0.5 * 1_000_000_000)
-                    try await Task.sleep(nanoseconds: duration)
-                    await MainActor.run {
-                        withAnimation {
-                            isDisabled = false
-                        }
+                    } else {
+                        Color.clear
+                            .frame(width: width, height: height)
+                            .padding(.trailing)
+                            .padding(.top)
+                            .padding(.top)
+                            .padding(.bottom)
+                            .padding(.bottom)
                     }
                 }
             }
+            .padding(.horizontal)
         }
     }
 }

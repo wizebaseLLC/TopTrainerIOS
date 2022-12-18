@@ -18,7 +18,6 @@ struct FeatureCard: View {
     var shouldShowDisplayNameAbove = false
     var extraDetailsBackgroundColor: Color?
     var animation: Namespace.ID
-    @State var isDisabled = false
     
     var body: some View {
         ZStack(alignment: .bottom) {
@@ -29,17 +28,6 @@ struct FeatureCard: View {
         .matchedGeometryEffect(id: item.id.uuidString + "Background", in: animation)
         .foregroundColor(.primary)
         .frame(width: width, height: height)
-        .onChange(of: isDisabled) { newValue in
-            if newValue {
-                Task {
-                    let duration = UInt64(0.5 * 1_000_000_000)
-                    try await Task.sleep(nanoseconds: duration)
-                    await MainActor.run {
-                        isDisabled = false
-                    }
-                }
-            }
-        }
     }
     
     var extraDetailsBubble: some View {
@@ -65,7 +53,6 @@ struct FeatureCard: View {
     var imageBackground: some View {
         ZStack {
             Button {
-                isDisabled = true
                 onPress()
             } label:  {
                 CachedAsyncImage(url: URL(string: item.imageUrl)) { image in
@@ -78,7 +65,6 @@ struct FeatureCard: View {
                 .cornerRadius(cornerRadius)
                 .shadow(color: .black.opacity(0.6), radius: 16, x: 8, y: 8 )
             }
-            .disabled(isDisabled)
             if shouldShowDisplayNameAbove {
                 Text(item.displayName)
                     .fontWeight(.heavy)

@@ -40,8 +40,8 @@ let MealSampleData: [FeaturedCardProps] = [
 ]
 
 let WorkoutSampleData: [FeaturedCardProps] = [
-    .init(displayName: "Barbell Squats", imageUrl: "https://i.ytimg.com/vi/KJlISHXK4Ss/maxresdefault.jpg", rating: 5, extraDetails: "Strength", trainer: .init(imageUrl: "https://www.pwmania.com/wp-content/uploads/2022/11/roman-reigns-heyman.jpg", name: "Roman Reigns")),
+    .init(displayName: "Biking", imageUrl: "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_650,q_75,w_1024/v1/clients/virginia/MR18070503V_011_42a9c5b0-6060-4b4c-881b-a833f651924a.jpg", rating: 4.5, extraDetails: "Cardio", trainer: .init(imageUrl: "https://www.ewrestlingnews.com/wp-content/uploads/2022/08/jade-cargill-e1660584900991.jpg", name: "Jade Cargill")),
     .init(displayName: "Barbell Bench Press", imageUrl: "https://www.bodybuilding.com/images/2017/june/how-the-rock-makes-a-275-pound-bench-go-a-long-way-header-v2b-960x540.jpg", rating: 4.5, extraDetails: "Strength", trainer: .init(imageUrl: "https://www.muscleandfitness.com/wp-content/uploads/2017/06/The-Rock-Dwayne-Johnson-Cable-Crossover-Promo.jpg?w=1180&quality=86&strip=all", name: "The Rock")),
     .init(displayName: "Barbell Deadlifts", imageUrl: "https://blogscdn.thehut.net/wp-content/uploads/sites/495/2018/10/25171220/Blog-Deadlifting-Male_1800x672_1200x672_acf_cropped.jpg", rating: 5, extraDetails: "Strength", trainer: .init(imageUrl: "https://thenewspocket.com/wp-content/uploads/2022/06/cardi-b-1a-1-scaled.webp", name: "Cardi B")),
-    .init(displayName: "Biking", imageUrl: "https://assets.simpleviewinc.com/simpleview/image/upload/c_fill,h_650,q_75,w_1024/v1/clients/virginia/MR18070503V_011_42a9c5b0-6060-4b4c-881b-a833f651924a.jpg", rating: 4.5, extraDetails: "Cardio", trainer: .init(imageUrl: "https://www.ewrestlingnews.com/wp-content/uploads/2022/08/jade-cargill-e1660584900991.jpg", name: "Jade Cargill"))
+    .init(displayName: "Barbell Squats", imageUrl: "https://i.ytimg.com/vi/KJlISHXK4Ss/maxresdefault.jpg", rating: 5, extraDetails: "Strength", trainer: .init(imageUrl: "https://www.pwmania.com/wp-content/uploads/2022/11/roman-reigns-heyman.jpg", name: "Roman Reigns"))
 ]
