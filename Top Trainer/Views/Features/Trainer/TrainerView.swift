@@ -14,7 +14,6 @@ struct TrainerView: View {
     let name: String
     var animation: Namespace.ID
     @Binding var selectedItem: FeaturedCardProps?
-    @State private var isDisabled = true
     
     var body: some View {
         ZStack(alignment: .top) {
@@ -28,42 +27,15 @@ struct TrainerView: View {
                 .background(.black)
                 .edgesIgnoringSafeArea(.top)
             }
-            HStack {
-                Spacer()
-                Button {
-                    withAnimation(.easeIn) {
-                        selectedItem = nil
-                    }
-                } label: {
-                    Image(systemName: "xmark")
-                        .font(.title2.bold())
-                        .padding(8)
-                    
-                }
-                .disabled(isDisabled)
-                .background(.black.opacity(0.7))
-                .buttonStyle(.bordered)
-                .clipShape(Circle())
-                .toolbar(.hidden, for: .tabBar)
-                .toolbar(.hidden, for: .navigationBar)
-                .opacity(isDisabled ? 0 : 1)
+        }
+        .withDimissButton {
+            withAnimation(.closeCard) {
+                selectedItem = nil
             }
         }
+        .toolbar(.hidden, for: .tabBar)
+        .toolbar(.hidden, for: .navigationBar)
         .zIndex(2)
-        .task {
-            do {
-                let duration = UInt64(0.5 * 1_000_000_000)
-                try await Task.sleep(nanoseconds: duration)
-                await MainActor.run {
-                    withAnimation {
-                        isDisabled = false
-                    }
-                }
-            }
-            catch {
-                print(error)
-            }
-        }
     }
 }
 

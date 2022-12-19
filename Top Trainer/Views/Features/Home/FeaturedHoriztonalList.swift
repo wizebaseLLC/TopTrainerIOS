@@ -23,7 +23,7 @@ struct FeaturedHorizontalList: View {
                 ForEach(listData) { data in
                     if data.id != selectedItem?.id{
                         FeatureCard(item: data, onPress: {
-                                withAnimation(.easeOut) {
+                                withAnimation(.openCard) {
                                     selectedItem = data
                                 }
                         },showOpacity: showOpacity, shouldShowDisplayNameAbove: shouldShowDisplayNameAbove, extraDetailsBackgroundColor: extraDetailsBackgroundColor, animation: animation)

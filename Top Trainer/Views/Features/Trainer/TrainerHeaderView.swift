@@ -18,7 +18,7 @@ struct TrainerHeaderView: View {
     var animation: Namespace.ID
     @State var backgroundOpacity: CGFloat = .zero
     @State var textOpacity: CGFloat = .zero
-
+    
     
     var body: some View {
         ZStack(alignment: .top)   {
@@ -40,7 +40,7 @@ struct TrainerHeaderView: View {
     var valuesPane: some View {
         Rectangle()
             .fill(Color("Tertiary"))
-            .cornerRadius(80, corners: [.bottomRight])
+            .cornerRadius(40, corners: [.bottomRight])
             .shadow(color: .cyan.opacity(0.5), radius: 16)
             .frame(height: totalHeight)
             .overlay(
@@ -57,7 +57,7 @@ struct TrainerHeaderView: View {
     var detailPane: some View {
         Rectangle()
             .fill(.indigo)
-            .cornerRadius(80, corners: [.bottomRight])
+            .cornerRadius(40, corners: [.bottomRight])
             .shadow(color: .indigo, radius: 16)
             .frame(height: nameBoxHeight)
             .overlay(
@@ -72,15 +72,19 @@ struct TrainerHeaderView: View {
     }
     
     var imageHeader: some View {
-        CachedAsyncImage(url: URL(string: imageUrl)) { image in
-            image.resizable()
-                .matchedGeometryEffect(id: id + "Image", in: animation)
-                .frame(height: imageHeight)
-        } placeholder: {
-            ProgressView()
+        GeometryReader { proxy in
+            CachedAsyncImage(url: URL(string: imageUrl)) { image in
+                image.resizable()
+                    .scaledToFill()
+                    .matchedGeometryEffect(id: id + "Image", in: animation)
+                    .frame(width: proxy.size.width, height: imageHeight)
+                
+            } placeholder: {
+                ProgressView()
+            }
+            .cornerRadius(40, corners: [.bottomRight])
+            .shadow(color: Color("Background").opacity(0.8), radius: 8)
         }
-        .cornerRadius(80, corners: [.bottomRight])
-        .shadow(color: Color("Background").opacity(0.8), radius: 16)
         
     }
 }

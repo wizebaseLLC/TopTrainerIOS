@@ -57,7 +57,10 @@ struct FeatureCard: View {
             } label:  {
                 CachedAsyncImage(url: URL(string: item.imageUrl)) { image in
                     image.resizable()
+                        .scaledToFill()
+                        .frame(width: width, height: height)
                         .matchedGeometryEffect(id: item.id.uuidString + "Image", in: animation)
+                    
                 } placeholder: {
                     ProgressView()
                 }
@@ -74,8 +77,8 @@ struct FeatureCard: View {
     }
     
     /// The Pane that specifies the name and star rating
+   @ViewBuilder
     var detailsPane: some View {
-        Group {
             if showOpacity {
                 detailBackgroundOpacity
                     .frame(height: 50)
@@ -87,7 +90,6 @@ struct FeatureCard: View {
                     .overlay(detailOverlay)
                     .allowsHitTesting(false)
             }
-        }
     }
     
     var detailBackgroundMaterial: some View {
