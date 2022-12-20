@@ -105,15 +105,15 @@ struct CreateInitialProfileView: View {
                 text: currentIndex == maxTagNumber  ? "Submit" :"Next",
                 background: currentIndex == maxTagNumber ? Color("Secondary") : Color("AccentColor"),
                 shouldHideShadow: false,
-                height: currentIndex == maxTagNumber  ? 60: 35
+                height: 35
             ) {
                 if currentIndex < maxTagNumber {
                         currentIndex += 1
                 } else {
-                    print("Submit ")
+                    print("Submit")
                 }
             }
-            .frame(width: currentIndex == maxTagNumber  ? 150 : 91)
+            .frame(width: 91)
         }
         .animation(.default, value: currentIndex)
         .padding([.horizontal, .bottom], 24)

@@ -13,7 +13,6 @@ struct Gradient1: ViewModifier {
     }
 }
 
-
 extension View {
     func gradient1() -> some View {
         modifier(Gradient1())
@@ -64,7 +63,6 @@ struct GradientBackground: ViewModifier {
         content.background(kGradientBackground.ignoresSafeArea(.all))
     }
 }
-
 
 extension View {
     func gradientBackground() -> some View {

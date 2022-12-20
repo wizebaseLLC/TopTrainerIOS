@@ -49,7 +49,7 @@ struct HeightPickerView: View {
                     }
                 }
             }
-            
+            .scrollContentBackground(.hidden)
             .frame(height: 160)
         }
         
